@@ -52,5 +52,19 @@ function init(app, User, randomString) {
         })
     }));
 
+    app.get('/auth/facebook/token', passport.authenticate('facebook-token'), function (req, res) {
+        console.log("user token : " + req.param('access_token'));
+        if(req.user){
+            res.send(200, req.user);
+        }
+        else if(!req.user){
+            res.send(401, req.user);
+        }
+    });
+
+    app.get('/auth/facebook/callback', passport.authenticate('facebook-token', {
+        successRedirect : '/',
+        failureRedirect : '/'
+    }));
     //function end
 }

@@ -37,8 +37,8 @@
       <file leaf-file-name="oauth.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/oauth.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+            <state relative-caret-position="361">
+              <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
               <folding>
                 <element signature="e#0#49#0" expanded="false" />
               </folding>
@@ -279,12 +279,12 @@
       <workItem from="1471100022820" duration="2000" />
       <workItem from="1471352052446" duration="1326000" />
       <workItem from="1475413308206" duration="3491000" />
-      <workItem from="1475419276455" duration="32000" />
+      <workItem from="1475419276455" duration="84000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5841000" />
+    <option name="totallyTimeSpent" value="5893000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -400,8 +400,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/oauth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+        <state relative-caret-position="361">
+          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
           <folding>
             <element signature="e#0#49#0" expanded="false" />
           </folding>

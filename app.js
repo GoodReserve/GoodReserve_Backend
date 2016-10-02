@@ -62,7 +62,7 @@ var Menu = mongoose.model('menus', MenuSchema);
 var Reservation = mongoose.model('reservations', ReservationSchema);
 
 
-require('./routes/oauth.js')(app, User, randomString);
+require('./routes/auth.js')(app, User, randomString);
 require('./routes/reservation')(app, User, Restaurant, Reservation, Menu);
 
 
