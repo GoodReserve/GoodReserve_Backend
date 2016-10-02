@@ -73,7 +73,10 @@ function init(app, User, randomString) {
             name : req.param('name'),
             phone : req.param('phone'),
             password : req.param('password'),
-            api_token : randomString.generate(15)
+            email : req.param('email'),
+            reservation : "",
+            reservation_wating : [],
+            auth_token : randomString.generate(15)
         });
         if(req.param('password') == req.param('password_chk')){
             user.save(function (err) {
@@ -88,6 +91,18 @@ function init(app, User, randomString) {
                 }
             });
         }
+    });
+
+    app.post('/auth/local/authenticate', function (req, res) {
+        console.log('Auth Key' + req.param('token'));
+        User.findOne({auth_token : req.param('token')}, function (err, result) {
+            if(err){
+                console.log("/auth/authenticate failed");
+                throw err;
+            }
+            console.log("User "+ result+ "Logged In");
+            res.send(200, result);
+        });
     });
     //function end
 }
