@@ -66,5 +66,28 @@ function init(app, User, randomString) {
         successRedirect : '/',
         failureRedirect : '/'
     }));
+
+    app.post('/auth/local/register', function (req, res) {
+        user= new User({
+            _id : randomString.generate(13),
+            name : req.param('name'),
+            phone : req.param('phone'),
+            password : req.param('password'),
+            api_token : randomString.generate(15)
+        });
+        if(req.param('password') == req.param('password_chk')){
+            user.save(function (err) {
+                if (err){
+                    console.log("/auth/register Failed");
+                    throw err;
+                }
+
+                else {
+                    console.log("user register : " + user);
+                    res.send(200, user);
+                }
+            });
+        }
+    });
     //function end
 }
