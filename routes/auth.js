@@ -104,5 +104,24 @@ function init(app, User, randomString) {
             res.send(200, result);
         });
     });
+
+    app.post('/auth/local/login', function (req, res) {
+        console.log("User Login : " + req.param('email'));
+        user.findOne({email : req.param('email')}, function (err, result) {
+            if(err){
+                console.log("/auth/local/login failed");
+                throw err;
+            }
+            console.log("DB Founded : "+ result);
+            if(result.password == req.param('password')){
+                console.log("User "+ result.name + "Logged In");
+                res.send(200, result);
+            }
+            else if(result.password != res.param('password')){
+                console.log("Password Error!");
+                res.send(401, "Access Denied");
+            }
+        })
+    });
     //function end
 }
