@@ -26,5 +26,16 @@ function init(app, User, Restaurant, Menu, randomString, upload) {
         }
     });
 
+    app.post('/menu/search', function (req, res) {
+        Menu.findOne({_id : req.param('id')}, function (err, result) {
+            if(err){
+                console.log('/menu/search DB Error');
+                throw err;
+            }
+            console.log(result + " Has Founded");
+            res.send(200, result);
+        });
+    });
+
     //function end
 }
