@@ -41,6 +41,9 @@
     menu : Menu Object Array
     음식점의 메뉴 리스트입니다.
     
+    thumbnail : String
+    썸네일로 띄워질 이미지의 경로입니다.
+    
     category : String Array
     음식점의 카테고리 리스트입니다.
     
@@ -87,6 +90,9 @@
     
     price : Number
     메뉴의 가격입니다.
+    
+    thumbnail : String
+    썸네일로 띄워질 이미지의 경로입니다.
     
 
 > Reservation Schema
@@ -174,3 +180,7 @@
     >>> OnFailure
     
         HTTP Status 401
+        
+
+
+
