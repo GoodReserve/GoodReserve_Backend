@@ -182,5 +182,33 @@
         HTTP Status 401
         
 
+> /rest/add : 업소의 정보를 추가합니다. POST
+
+>> Requiring Params
+
+    name : 업소의 이름 입니다.
+    menu : 음식점의 메뉴 리스트 입니다. 메뉴에 해당하는 id값만 배열형태로 저장합니다.
+    category : 음식점의 카테고리 입니다. 테마별 검색기능 필터링 단어로 사용됩니다.
+    address : 음식점의 주소 입니다.
+    reservation_max : 음식점의 예약 가능 최대 인원 수 입니다.
+    phone : 음식점의 전화번호 입니다.
+    reservaton_cancel : 음식점의 예약 취소 가능 시간의 한도입니다. 분 단위로 입력받습니다. ex) 120
+    main_benefit : 음식점의 주요 예약 혜택입니다.
+    sub_benefit : 음식점의 부가적인 예약 혜택입니다.
+    
+>> Return Values
+
+    HTTP Status 200, Restaurant Schema
+    
+> /rest/search : 업소의 id값으로 업소의 정보를 조회합니다. POST
+
+>> Requiring Params
+
+    id : 업소의 고유 식별번호 입니다.
+    
+>> Return Values
+
+    HTTP Status 200, Restaurant Schema
+
 
 
