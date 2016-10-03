@@ -117,3 +117,60 @@
     
     reservation_code : String
     예약한 일정에 대한 확인 코드입니다.
+    
+    
+    
+
+## API Document
+
+> /auth/facebook/token : 페이스북 로그인을 통해 얻은 토큰으로 로그인합니다. GET
+
+>> Requiring Params
+
+    access_token : 페이스북 access_token입니다.
+    
+>> Return Values
+    
+    HTTP Status 200, User Schema Without Password
+
+
+> /auth/local/register : 로컬서버 Database를 통한 회원가입 API입니다. POST
+
+>> Requiring Params
+
+    name : 사용자의 이름입니다.
+    phone : 사용자의 전화번호입니다.
+    password : 사용자의 비밀번호입니다.
+    password_chk : 사용자의 비밀번호 확인란의 값입니다.
+    email : 사용자의 이메일입니다.
+    
+>> Return Values
+
+    HTTP Status 200, User Schema Without Password
+
+> /auth/local/authenticate : 로컬서버 Database를 통한 자동로그인 API입니다. POST
+
+>> Requiring Params
+    
+    token : 사용자의 자동로그인 토큰입니다.
+    
+>> Return Values
+    
+    HTTP Status 200, User Schema Without Password
+
+> /auth/local/login : 로컬서버 Database를 통한 로그인 API입니다. 초기 1회 이후는 /auth/local/authenticate를 이용해주세요. POST
+
+>> Requiring Params
+
+    email : 사용자의 회원가입시 입력했던 이메일 주소입니다.
+    password : 사용자의 회원가입시 입력했던 비밀번호입니다.
+    
+>> Return Values
+
+    >>> OnSuccess
+    
+        HTTP Status 200, User Schema Without Password
+        
+    >>> OnFailure
+    
+        HTTP Status 401
