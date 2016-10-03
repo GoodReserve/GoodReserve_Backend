@@ -94,6 +94,9 @@
     thumbnail : String
     썸네일로 띄워질 이미지의 경로입니다.
     
+    restaurant : String
+    메뉴가 제공되는 업소의 고유번호입니다.
+    
 
 > Reservation Schema
     
@@ -154,6 +157,7 @@
 
     HTTP Status 200, User Schema Without Password
 
+
 > /auth/local/authenticate : 로컬서버 Database를 통한 자동로그인 API입니다. POST
 
 >> Requiring Params
@@ -163,6 +167,7 @@
 >> Return Values
     
     HTTP Status 200, User Schema Without Password
+
 
 > /auth/local/login : 로컬서버 Database를 통한 로그인 API입니다. 초기 1회 이후는 /auth/local/authenticate를 이용해주세요. POST
 
@@ -195,10 +200,12 @@
     reservaton_cancel : 음식점의 예약 취소 가능 시간의 한도입니다. 분 단위로 입력받습니다. ex) 120
     main_benefit : 음식점의 주요 예약 혜택입니다.
     sub_benefit : 음식점의 부가적인 예약 혜택입니다.
+    thumbnail : File 파라미터로 받습니다. 음식점의 썸네일로 보여질 파일입니다.
     
 >> Return Values
 
     HTTP Status 200, Restaurant Schema
+    
     
 > /rest/search : 업소의 id값으로 업소의 정보를 조회합니다. POST
 
@@ -211,4 +218,26 @@
     HTTP Status 200, Restaurant Schema
 
 
+> /menu/add : 업소에 해당하는 메뉴를 추가합니다.
 
+>> Requiring Params
+
+    name : 메뉴의 이름입니다.
+    price : 메뉴의 가격입니다.
+    restaurant : 메뉴가 제공되는 음식점의 고유 식별번호입니다.
+    thumbnail : File 파라미터로 받습니다. 메뉴의 썸네일로 들어갈 파일입니다.
+    
+>> Return Values
+
+    HTTP Status 200, Menu Schema
+    
+
+> /menu/search : 메뉴의 id값으로 메뉴의 정보를 조회합니다.
+
+>> Requiring Params
+
+    id : 메뉴의 고유 식별번호입니다.
+    
+>> Return Values
+
+    HTTP Status 200, Menu Schema
