@@ -28,7 +28,7 @@ var UserSchema = new schema({
     phone: String,
     auth_token: String,
     reservation: String,
-    reservation_wating: String
+    reservation_waiting: String
 });
 
 var RestaurantSchema = new schema({

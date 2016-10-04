@@ -37,7 +37,7 @@ function init(app, User, randomString) {
                     email : profile.email,
                     phone : profile.phone,
                     reservation : "",
-                    reservation_wating : []
+                    reservation_waiting : []
                 });
                 user.save(function (err) {
                     if(err) console.log(err);
@@ -75,7 +75,7 @@ function init(app, User, randomString) {
             password : req.param('password'),
             email : req.param('email'),
             reservation : "",
-            reservation_wating : [],
+            reservation_waiting : [],
             auth_token : randomString.generate(15)
         });
         if(req.param('password') == req.param('password_chk')){
@@ -94,7 +94,7 @@ function init(app, User, randomString) {
                         phone : user.phone,
                         auth_token : user.auth_token,
                         reservation : user.reservation,
-                        reservation_wating : user.reservation_wating
+                        reservation_waiting : user.reservation_waiting
                     };
                     res.send(200, response);
                 }
@@ -117,7 +117,7 @@ function init(app, User, randomString) {
                 phone : result.phone,
                 auth_token : result.auth_token,
                 reservation : result.reservation,
-                reservation_wating : result.reservation_wating
+                reservation_waiting : result.reservation_waiting
             };
             res.send(200, response);
         });
@@ -140,7 +140,7 @@ function init(app, User, randomString) {
                     phone : result.phone,
                     auth_token : result.auth_token,
                     reservation : result.reservation,
-                    reservation_wating : result.reservation_wating
+                    reservation_waiting : result.reservation_waiting
                 };
                 res.send(200, response);
             }

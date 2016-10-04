@@ -26,7 +26,7 @@
     reservation : String
     사용자의 예약의 고유 식별번호입니다.
     
-    reservation_wating : String Array
+    reservation_waiting : String Array
     사용자의 찜목록에 있는 요소들의 고유 식별번호입니다.
     
 
