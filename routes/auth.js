@@ -133,7 +133,16 @@ function init(app, User, randomString) {
             console.log("DB Founded : "+ result);
             if(result.password == req.param('password')){
                 console.log("User "+ result.name + "Logged In");
-                res.send(200, result);
+                var response = {
+                    _id : result._id,
+                    email : result.email,
+                    name : result.name,
+                    phone : result.phone,
+                    auth_token : result.auth_token,
+                    reservation : result.reservation,
+                    reservation_wating : result.reservation_wating
+                };
+                res.send(200, response);
             }
             else if(result.password != res.param('password')){
                 console.log("Password Error!");
