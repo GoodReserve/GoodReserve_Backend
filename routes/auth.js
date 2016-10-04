@@ -87,7 +87,16 @@ function init(app, User, randomString) {
 
                 else {
                     console.log("user register : " + user);
-                    res.send(200, user);
+                    var response = {
+                        _id : user._id,
+                        email : user.email,
+                        name : user.name,
+                        phone : user.phone,
+                        auth_token : user.auth_token,
+                        reservation : user.reservation,
+                        reservation_wating : user.reservation_wating
+                    };
+                    res.send(200, response);
                 }
             });
         }
