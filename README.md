@@ -241,3 +241,14 @@
 >> Return Values
 
     HTTP Status 200, Menu Schema
+    
+    
+> /rest/search/tag : 쿼리로 레스토랑을 검색합니다.
+
+>> Requiring Params
+
+    query : 음식점을 검색하기 위한 쿼리입니다. 단어 단위의 배열로 입력받습니다.
+    
+>> Return Values
+    
+    HTTP Status 200, Restaurant Object Array
