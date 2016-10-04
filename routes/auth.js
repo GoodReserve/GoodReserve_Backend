@@ -110,7 +110,16 @@ function init(app, User, randomString) {
                 throw err;
             }
             console.log("User "+ result+ "Logged In");
-            res.send(200, result);
+            var response = {
+                _id : result._id,
+                email : result.email,
+                name : result.name,
+                phone : result.phone,
+                auth_token : result.auth_token,
+                reservation : result.reservation,
+                reservation_wating : result.reservation_wating
+            };
+            res.send(200, response);
         });
     });
 
