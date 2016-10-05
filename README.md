@@ -142,7 +142,7 @@
     
     HTTP Status 200, User Schema Without Password
 
-
+-----
 > /auth/local/register : 로컬서버 Database를 통한 회원가입 API입니다. POST
 
 >> Requiring Params
@@ -156,7 +156,7 @@
 >> Return Values
 
     HTTP Status 200, User Schema Without Password
-
+-----
 
 > /auth/local/authenticate : 로컬서버 Database를 통한 자동로그인 API입니다. POST
 
@@ -168,7 +168,7 @@
     
     HTTP Status 200, User Schema Without Password
 
-
+-----
 > /auth/local/login : 로컬서버 Database를 통한 로그인 API입니다. 초기 1회 이후는 /auth/local/authenticate를 이용해주세요. POST
 
 >> Requiring Params
@@ -186,7 +186,7 @@
     
         HTTP Status 401
         
-
+-----
 > /rest/add : 업소의 정보를 추가합니다. POST
 
 >> Requiring Params
@@ -206,7 +206,7 @@
 
     HTTP Status 200, Restaurant Schema
     
-    
+    -----
 > /rest/search : 업소의 id값으로 업소의 정보를 조회합니다. POST
 
 >> Requiring Params
@@ -217,7 +217,7 @@
 
     HTTP Status 200, Restaurant Schema
 
-
+-----
 > /menu/add : 업소에 해당하는 메뉴를 추가합니다.
 
 >> Requiring Params
@@ -231,7 +231,7 @@
 
     HTTP Status 200, Menu Schema
     
-
+-----
 > /menu/search : 메뉴의 id값으로 메뉴의 정보를 조회합니다.
 
 >> Requiring Params
@@ -242,7 +242,7 @@
 
     HTTP Status 200, Menu Schema
     
-    
+    -----
 > /rest/search/tag : 쿼리로 레스토랑을 검색합니다.
 
 >> Requiring Params
@@ -253,7 +253,7 @@
     
     HTTP Status 200, Restaurant Object Array
     
-
+-----
 > /resv/add : 새로운 예약을 생성합니다.
 
 >> Requiring Params
@@ -274,7 +274,7 @@
 
     HTTP Status 200, Reservation Schema
     
-    
+    -----
 > /resv/search : 예약의 고유 식별번호(_id)를 이용하여 예약 정보를 조회합니다.
 
 >> Requiring Params
@@ -285,7 +285,7 @@
 
     HTTP Status 200, Reservation Schema
     
-
+-----
 > /resv/destroy : 예약이 완료되었을때, DB에서 저장된 예약 정보를 파기합니다.
 
 >> Requiring Params
