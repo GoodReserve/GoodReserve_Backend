@@ -103,6 +103,9 @@
     _id : String
     예약의 고유 식별번호 입니다.
     
+    restaurant_id : String
+    예약한 식당의 고유 식별번호입니다.
+    
     restaurant_name : String
     예약한 식당의 이름입니다.
     
