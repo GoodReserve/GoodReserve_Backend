@@ -73,7 +73,7 @@ var Reservation = mongoose.model('reservations', ReservationSchema);
 
 
 require('./routes/auth.js')(app, User, randomString);
-require('./routes/reservation.js')(app, User, Restaurant, Reservation, Menu);
+require('./routes/reservation.js')(app, User, Restaurant, Reservation, Menu, randomString);
 require('./routes/rest.js')(app, User, Restaurant, Menu, randomString, upload);
 require('./routes/menu.js')(app, User, Restaurant, Menu, randomString, upload)
 
