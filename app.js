@@ -13,6 +13,12 @@ var upload = multer({
         return 'thumbnails_' + filename;
     }
 });
+var Iamport = require('iamport');
+var iamport = new Iamport({
+    impKey : "",
+    impSecret : ""
+});
+//아임포트 기본 세팅
 var app = express();
 
 var routes = require('./routes/index');
