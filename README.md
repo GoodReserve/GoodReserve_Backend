@@ -310,4 +310,18 @@
 >> Return Values
 
     HTTP Status 200, Reservation Schema Array
+    
+-----
+
+> /resv/search/current : 현재 예약된 좌석의 수를 구해옵니다.
+
+>> Requiring Params
+    
+    restaurant_id : 검색할 대상 음식점의 고유 식별번호 입니다.
+    
+>> Return Values
+
+    HTTP Status 200, Number Of Current People
+    
+    
         
