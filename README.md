@@ -294,4 +294,17 @@
     
 >> Return Values
 
-        HTTP Status 200, Reservation Schema
+    HTTP Status 200, Reservation Schema
+        
+-----
+
+> /resv/restaurant/sesarch : 매장에 현재 문의되어있는 예약을 목록으로 보여줍니다.
+
+>> Requiring Params
+
+    restaurant_id : 예약이 걸린 음식점의 고유 식별번호 입니다.
+    
+>> Return Values
+
+    HTTP Status 200, Reservation Schema Array
+        
