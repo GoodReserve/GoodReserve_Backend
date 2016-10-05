@@ -252,3 +252,54 @@
 >> Return Values
     
     HTTP Status 200, Restaurant Object Array
+    
+
+> /resv/add : 새로운 예약을 생성합니다.
+
+>> Requiring Params
+
+    retraurant_id : 예약하는 식당의 고유 식별번호입니다.
+    
+    reservation_time : 예약한 시간입니다.
+    
+    reservation_people : 예약한 사람의 수입니다.
+    
+    reservation_payment : 예약한 음식점에서 결제할 방식입니다. 분류는 API문서를 참고해 주세요.
+    
+    reservation_menu : 예약한 메뉴의 리스트입니다.
+    
+    reservation_price : 예약한 메뉴의 총 금액입니다.
+    
+>> Return Values
+
+    HTTP Status 200, Reservation Schema
+    
+    
+> /resv/search : 예약의 고유 식별번호(_id)를 이용하여 예약 정보를 조회합니다.
+
+>> Requiring Params
+
+    _id : 예약의 고유 식별번호 입니다.
+    
+>> Return Values
+
+    HTTP Status 200, Reservation Schema
+    
+
+> /resv/destroy : 예약이 완료되었을때, DB에서 저장된 예약 정보를 파기합니다.
+
+>> Requiring Params
+
+    _id : 예약의 고유 식별번호 입니다.
+    
+    reservation_code : 예약한 일정에 대한 업주와 클라이언트 간의 확인 코드입니다.
+    
+>> Return Values
+
+    >>> OnSuccess
+        
+        HTTP Status 200, Reservation Schema
+        
+    >>> OnFailure
+    
+        HTTP Status 401
