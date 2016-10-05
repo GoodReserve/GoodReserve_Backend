@@ -37,7 +37,7 @@ function init(app, User, randomString) {
                     email : profile.email,
                     phone : profile.phone,
                     reservation : "",
-                    reservation_wating : []
+                    reservation_waiting : []
                 });
                 user.save(function (err) {
                     if(err) console.log(err);
@@ -75,7 +75,7 @@ function init(app, User, randomString) {
             password : req.param('password'),
             email : req.param('email'),
             reservation : "",
-            reservation_wating : [],
+            reservation_waiting : [],
             auth_token : randomString.generate(15)
         });
         if(req.param('password') == req.param('password_chk')){
@@ -87,7 +87,16 @@ function init(app, User, randomString) {
 
                 else {
                     console.log("user register : " + user);
-                    res.send(200, user);
+                    var response = {
+                        _id : user._id,
+                        email : user.email,
+                        name : user.name,
+                        phone : user.phone,
+                        auth_token : user.auth_token,
+                        reservation : user.reservation,
+                        reservation_waiting : user.reservation_waiting
+                    };
+                    res.send(200, response);
                 }
             });
         }
@@ -101,7 +110,16 @@ function init(app, User, randomString) {
                 throw err;
             }
             console.log("User "+ result+ "Logged In");
-            res.send(200, result);
+            var response = {
+                _id : result._id,
+                email : result.email,
+                name : result.name,
+                phone : result.phone,
+                auth_token : result.auth_token,
+                reservation : result.reservation,
+                reservation_waiting : result.reservation_waiting
+            };
+            res.send(200, response);
         });
     });
 
@@ -115,7 +133,16 @@ function init(app, User, randomString) {
             console.log("DB Founded : "+ result);
             if(result.password == req.param('password')){
                 console.log("User "+ result.name + "Logged In");
-                res.send(200, result);
+                var response = {
+                    _id : result._id,
+                    email : result.email,
+                    name : result.name,
+                    phone : result.phone,
+                    auth_token : result.auth_token,
+                    reservation : result.reservation,
+                    reservation_waiting : result.reservation_waiting
+                };
+                res.send(200, response);
             }
             else if(result.password != res.param('password')){
                 console.log("Password Error!");
