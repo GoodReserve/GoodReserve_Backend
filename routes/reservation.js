@@ -13,6 +13,7 @@ function init(app, User, Restaurant, Reservation, Menu, randomString) {
             }
             var resv = new Reservation({
                 _id : randomString.generate(13),
+                restaurant_id : req.param('restaurant_id'),
                 restaurant_name : result.name,
                 reservation_time : req.param('reservation_name'),
                 reservation_people : req.param('reservation_people'),
@@ -54,6 +55,15 @@ function init(app, User, Restaurant, Reservation, Menu, randomString) {
         });
     });
 
-
+    app.post('/resv/restaurant/search', function (req, res) {
+        Reservation.find({restaurant_id : req.param('restaurant_id')}, function (err, result) {
+            if(err){
+                console.log("/resv/restaurant/search DB Error");
+                throw err;
+            }
+            console.log("Restaurant "+ req.param('id') + " 's reservations : "+ result);
+            res.send(200, result);
+        })
+    })
     //function end
 }

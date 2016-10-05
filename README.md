@@ -298,7 +298,7 @@
         
 -----
 
-> /resv/restaurant/sesarch : 매장에 현재 문의되어있는 예약을 목록으로 보여줍니다.
+> /resv/restaurant/search : 매장에 현재 문의되어있는 예약을 목록으로 보여줍니다.
 
 >> Requiring Params
 
