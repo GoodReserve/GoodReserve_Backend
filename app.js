@@ -15,8 +15,8 @@ var upload = multer({
 });
 var Iamport = require('iamport');
 var iamport = new Iamport({
-    impKey : "",
-    impSecret : ""
+    impKey : "2907976359420871",
+    impSecret : "Ox5lImi8pz6tdhEwonRCWXJ5hY0AeMz3jEp21HaqggTtyy0XVRzRPiX6hXGvKfz3UY5VGglWxfq6Nq3I"
 });
 //아임포트 기본 세팅
 var app = express();
