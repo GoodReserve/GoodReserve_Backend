@@ -20,7 +20,7 @@ function init(app, User, randomString) {
     });
 
     passport.use(new FacebookTokenStrategy({
-        clientId : "218194355262831",
+        clientID : "218194355262831",
         clientSecret : "84e950c8158a2c91ac5828ad85f32605"
     }, function (accessToken, refreshToken, profile, done) {
         console.log(profile);
