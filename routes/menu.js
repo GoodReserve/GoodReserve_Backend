@@ -4,7 +4,14 @@
 
 module.exports = init;
 
-function init(app, User, Restaurant, Menu, randomString, upload) {
+function init(app, User, Restaurant, Menu, randomString) {
+    var multer = require('multer');
+    var upload = multer({
+        dest : './photos/',
+        rename : function (fieldname, filename) {
+            return 'thumbnails_' + filename;
+        }
+    });
 
     app.post('/menu/add', upload.single('thumbnail'), function (req, res) {
         var menu = new Menu({

@@ -6,13 +6,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var randomString = require('randomstring');
-var multer = require('multer');
-var upload = multer({
-    dest : './photos/',
-    rename : function (fieldname, filename) {
-        return 'thumbnails_' + filename;
-    }
-});
 var Iamport = require('iamport');
 var iamport = new Iamport({
     impKey : "2907976359420871",
@@ -81,8 +74,8 @@ var Reservation = mongoose.model('reservations', ReservationSchema);
 
 require('./routes/auth.js')(app, User, randomString);
 require('./routes/reservation.js')(app, User, Restaurant, Reservation, Menu, randomString);
-require('./routes/rest.js')(app, User, Restaurant, Menu, randomString, upload);
-require('./routes/menu.js')(app, User, Restaurant, Menu, randomString, upload)
+require('./routes/rest.js')(app, User, Restaurant, Menu, randomString);
+require('./routes/menu.js')(app, User, Restaurant, Menu, randomString);
 
 
 // view engine setup
