@@ -130,6 +130,9 @@
     reservation_code : String
     예약한 일정에 대한 확인 코드입니다.
     
+    cancel_type : Number
+    취소된 예약일 경우 취소된 사유를 나타내는 코드입니다.
+    
     
     
 
@@ -325,5 +328,13 @@
     
 -----
 
-> /
+> /resv/cancel : 예약을 취소합니다.
+
+>> Requiring Params
+
+    reservation_id : 취소할 대상 예약의 고유 식별번호 입니다.
+    
+    cancel_reason : 취소하는 사유에 대한 숫자 코드입니다.
+    
+    cancel_comment : cancel_reason이 3번 타입에 속할 경우, 특별한 취소 사유에 대한 파라미터입니다.
         
