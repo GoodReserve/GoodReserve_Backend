@@ -66,6 +66,15 @@ function init(app, User, Restaurant, Reservation, Menu, randomString) {
         })
     })
 
-
+    app.post('/resv/cancel', function (req, res) {
+    	Reservation.update({reservation_id : req.param('reservation_id')}, {cancel_type : req.param('cancel_reason')}, function(err, result){
+		if(err){
+			console.log("/resv/cancel DB Error");
+			throw err;
+		}
+		console.log("Reservation " + req.param('reservation_id') + " has canceled.");
+		res.send(200, result);
+		})
+	});
     //function end
 }
