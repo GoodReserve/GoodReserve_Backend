@@ -7,4 +7,21 @@
 .ListSilver{
 	background-color: #bdbdbd !important;
 }
-
+nav .restaurantName{
+	color : #993939 !important;
+	background-color: white;
+	padding : 0px 15px;
+	font-size: 2rem;
+	margin : 0px 15px;
+}
+nav .saleWrapper{
+	position: absolute;
+	right : 0px;
+}
+.saleWrapper .saleEndButton{
+	background: white;
+	border-radius: 2rem;
+	color: #993939;
+	font-size : 1.2rem;
+	padding : 7px 10px;
+}
