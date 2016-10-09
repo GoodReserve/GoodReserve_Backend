@@ -6,6 +6,7 @@
     <script src="/javascripts/materialize.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel='stylesheet' href="/stylesheets/common.css" />
+    <link rel='stylesheet' href='/stylesheets/index.css'/>
   </head>
   <body>
   <nav>
@@ -19,5 +20,26 @@
 	</ul>
   </div>
   </nav>
+  <div class="content">
+  <div class="MainContent">
+  </div>
+  <div class="ListContent">
+    <div class="ListContentTitle center-align">예약 대기 List</div>
+    <% for(var i = 0; i<5 ; ++i){ %>
+      <div class="WaitListCard">
+        <div class="WaitListCardHeader">
+	 <span class="left left-align">13:00~15:00</span>
+	 <span class="right right-algin">REZRO-4062</span>
+	</div>
+	<div class="WaitListCardContent valign-wrapper center-align">
+		<p class="valign center-align">
+		<strong>송정현</strong>
+		<span>010-7777-7777</span>
+		</p>
+	</div>
+      </div>
+    <% } %>
+  </div>
+  </div>
   </body>
 </html>

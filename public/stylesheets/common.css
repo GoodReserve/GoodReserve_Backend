@@ -25,3 +25,35 @@ nav .saleWrapper{
 	font-size : 1.2rem;
 	padding : 7px 10px;
 }
+.content{
+	width : 100%;
+	height : calc(100vh - 64px);
+}
+.WaitListCard{
+	background : white;
+	width : 245px;
+	height : 99px;
+	margin : 12.5px;
+	overflow : hidden;
+	border-radius: 15px;
+}
+.WaitListCardHeader{
+	background-color: #EAEAEA;
+	height : 30px;
+}
+.WaitListCardHeader span{
+	font-size:1.1em;
+	line-height: 30px;
+	margin : 0px 8px;
+	color : #747474;
+}
+.WaitListCardHeader span.right{
+	font-weight : bold;
+}
+
+.WaitListCardContent strong{
+	font-size: 1.5em;
+}
+.WaitListCardContent p{
+width : 100%;
+}

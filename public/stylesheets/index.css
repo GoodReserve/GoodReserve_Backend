@@ -1,0 +1,18 @@
+.ListContent{
+	width : 270px;
+	height : 100%;
+	float : right;
+	background-color : #bdbdbd;
+	display: inline-block;
+}
+.MainContent{
+	width : calc(100% - 270px);
+	height : 100%;
+	background-color : white;
+	display: inline-block;
+}
+.ListContentTitle{
+	color: white;
+	margin : 10px 0px;
+	font-size: 1.5rem;
+}
