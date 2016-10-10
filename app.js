@@ -65,18 +65,23 @@ var ReservationSchema = new schema({
     reservation_code: String
 });
 
+var BucketSchema = new schema({
+    _id : String,
+    menus : Array,
+});
 
 var User = mongoose.model('users', UserSchema);
 var Restaurant = mongoose.model('restaurants', RestaurantSchema);
 var Menu = mongoose.model('menus', MenuSchema);
 var Reservation = mongoose.model('reservations', ReservationSchema);
+var Bucket = mongoose.model('buckets', Bucket);
 
 
 require('./routes/auth.js')(app, User, randomString);
 require('./routes/reservation.js')(app, User, Restaurant, Reservation, Menu, randomString);
 require('./routes/rest.js')(app, User, Restaurant, Menu, randomString);
 require('./routes/menu.js')(app, User, Restaurant, Menu, randomString);
-
+require('./routes/bucket.js')(app, Bucket, randomString);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
