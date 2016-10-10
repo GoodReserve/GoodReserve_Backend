@@ -7,4 +7,111 @@
 .ListSilver{
 	background-color: #bdbdbd !important;
 }
+nav .restaurantName{
+	color : #993939 !important;
+	background-color: white;
+	padding : 0px 15px;
+	font-size: 2rem;
+	margin : 0px 15px;
+}
+nav .saleWrapper{
+	position: absolute;
+	right : 0px;
+}
+.saleWrapper .saleEndButton{
+	background: white;
+	border-radius: 2rem;
+	color: #993939;
+	font-size : 1.2rem;
+	padding : 7px 10px;
+}
+.content{
+	width : 100%;
+	height : calc(100vh - 64px);
+}
+.WaitListCard{
+	background : white;
+	width : 245px;
+	height : 99px;
+	box-shadow : 0px 1px 3px 1px black;
+	margin : 12.5px;
+	overflow : hidden;
+	border-radius: 15px;
+}
+.WaitListCardHeader{
+	background-color: #EAEAEA;
+	height : 30px;
+}
+.WaitListCardHeader span{
+	font-size:1.1em;
+	line-height: 30px;
+	margin : 0px 8px;
+	color : #747474;
+}
+.WaitListCardHeader span.right{
+	font-weight : bold;
+}
 
+.WaitListCardContent strong{
+	font-size: 1.5em;
+}
+.WaitListCardContent p{
+	width : 100%;
+}
+.ReserveCard{
+	width:320px;
+	height:266px;
+	overflow: hidden;
+	display: inline-block;
+	border-radius : 15px;
+	background : white;
+	margin : 15px;
+	box-shadow : 0px 1px 3px 1px black;
+}
+.ReserveCardHeader{
+	height: 30px;
+	background-color: #993939;
+	color:white;
+	border-bottom : 1px solid white;
+}
+.ReserveCardHeader span{
+	font-size: 1.1em;
+	line-height: 30px;
+	margin: 0px 8px;
+}
+.ReserveHeaderContent strong{
+	font-size: 1.7em;
+	margin-left: 15px;
+	margin-right: 5px;
+}
+.MainDarkRed-text{
+	color: #993939 !important;
+}
+.MainContentHeader{
+	font-size:1.7em;
+	height: 60px;
+	font-weight: bold;
+	padding: 15px;
+}
+.CardContainer{
+	display : inline-block;
+	margin : auto;
+}
+.ReserveCardContent{
+	text-align:left;
+	padding: 20px;
+}
+.ReserveCardContent .valign{
+	width: 100%;
+}
+.ReserveCardContentTitle{
+	color: #747474;
+}
+.CardMenuContent{
+	margin-left : 25px;
+}
+.ReserveCardContent p{
+	font-weight: bold;
+	margin: 0;
+	font-size: 1.7em;
+}

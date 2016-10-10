@@ -1,0 +1,21 @@
+.ListContent{
+	width : 270px;
+	height : calc(100vh - 64px);
+	overflow : scroll;
+	float : right;
+	background-color : #bdbdbd;
+	display: inline-block;
+}
+.MainContent{
+	width : calc(100% - 270px);
+	height : calc(100vh - 64px);
+	overflow: scroll;
+	text-align: center;
+	background-color : white;
+	display: inline-block;
+}
+.ListContentTitle{
+	color: white;
+	margin : 10px 0px;
+	font-size: 1.5rem;
+}
