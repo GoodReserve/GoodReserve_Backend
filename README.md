@@ -133,6 +133,15 @@
     cancel_type : Number
     취소된 예약일 경우 취소된 사유를 나타내는 코드입니다.
     
+
+> Bucket Schema
+
+    _id : String
+    장바구니의 고유 식별번호입니다.
+    
+    menus : String Array
+    장바구니에 추가된 메뉴들의 고유 식별번호 배열입니다.
+    
     
     
 
