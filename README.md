@@ -121,8 +121,8 @@
         0 : 선금결제
         1 : 현장결제
         
-    reservation_menu : Menu Object Array
-    예약한 메뉴의 리스트입니다.
+    reservation_menu : String
+    예약한 메뉴의 장바구니 고유 식별번호입니다.
     
     reservation_price : Number
     예약한 메뉴의 총 금액입니다.
@@ -337,4 +337,40 @@
     cancel_reason : 취소하는 사유에 대한 숫자 코드입니다.
     
     cancel_comment : cancel_reason이 3번 타입에 속할 경우, 특별한 취소 사유에 대한 파라미터입니다.
+    
+> /bucket/add : 장바구니에 메뉴를 추가합니다.
+
+>> Requiring Params
+
+    menu_id : 추가할 대상 메뉴의 고유 식별번호입니다.
+    
+    bucket_id : 추가할 대상 장바구니의 고유 식별번호입니다.
+    
+>> Return Values
+    
+    HTTP Status 200, Bucket Schema
+    
+-----
+
+> /bucket/info : 장바구니의 정보를 가져옵니다.
+
+>> Requiring Params
+
+    bucket_id : 정보를 가져올 대상 장바구니의 고유 식별번호입니다.
+    
+>> Return Values
+
+    HTTP Status 200, Bucket Schema
+    
+------
+
+> /bucket/destroy : 장바구니의 데이터를 파기합니다.
+
+>> Requiring Params
+
+    bucket_id : 정보를 파기할 대상 장바구니의 고유 식별번호입니다.
+    
+>> Return Values
+
+    HTTP Staus 200, Bucket Schema
         
