@@ -22,10 +22,39 @@
   </nav>
   <div class="content">
   <div class="MainContent">
+    <div class="MainDarkRed-text MainContentHeader">
+      <span class="left left-align">메뉴 예약 내역</span>
+      <span class="right right-align">2016. 10. 16. YB 생:일</span>
+    </div>
+    <div class="CardContainer">
+  <% for(var i = 0; i<11;++i){ %>
+    <div class="ReserveCard">
+      <div class="ReserveCardHeader">
+        <span class="left left-align">13:00~15:00</span>
+	<span class="right right-align">REZRO-4062</span>
+      </div>
+      <div class="ReserveHeaderContent MainDarkRed white-text valign-wrapper">
+      	<p class="valign">
+	<strong>김영환</strong>
+	<span>010-8888-8888</span>
+      </div>
+      <div class="ReserveCardContent valign-wrapper">
+        <div class="valign">
+	  <div class="ReserveCardContentTitle">메뉴</div>
+	  <% for(var j=0 ; j < 3;++j){ %>
+	    <div class="CardMenuContent MainDarkRed-text">김치 말이 전 3인분</div>
+	  <% } %>
+	  <p class="right-align CardTotalPrice MainDarkRed-text">35,123원</p>
+	</div>
+      </div>
+    </div>
+  <% } %>
+    </div>
   </div>
   <div class="ListContent">
     <div class="ListContentTitle center-align">예약 대기 List</div>
-    <% for(var i = 0; i<5 ; ++i){ %>
+    <div class="WaitCardContainer">
+    <% for(var i = 0; i<12 ; ++i){ %>
       <div class="WaitListCard">
         <div class="WaitListCardHeader">
 	 <span class="left left-align">13:00~15:00</span>
@@ -39,6 +68,7 @@
 	</div>
       </div>
     <% } %>
+    </div>
   </div>
   </div>
   </body>

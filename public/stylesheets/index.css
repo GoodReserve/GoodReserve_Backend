@@ -1,13 +1,16 @@
 .ListContent{
 	width : 270px;
-	height : 100%;
+	height : calc(100vh - 64px);
+	overflow : scroll;
 	float : right;
 	background-color : #bdbdbd;
 	display: inline-block;
 }
 .MainContent{
 	width : calc(100% - 270px);
-	height : 100%;
+	height : calc(100vh - 64px);
+	overflow: scroll;
+	text-align: center;
 	background-color : white;
 	display: inline-block;
 }
