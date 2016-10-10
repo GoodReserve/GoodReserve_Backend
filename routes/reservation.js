@@ -20,7 +20,8 @@ function init(app, User, Restaurant, Reservation, Menu, randomString) {
                 reservation_payment : req.param('reservation_payment'),
                 reservation_menu : req.param('reservation_menu'),
                 reservation_price : req.param('reservation_price'),
-                reservation_code : randomString.generate(8)
+                reservation_code : randomString.generate(8),
+                reservation_status : 0
             });
             resv.save(function (err, silence) {
                 if(err){
@@ -45,7 +46,7 @@ function init(app, User, Restaurant, Reservation, Menu, randomString) {
     });
 
     app.post('/resv/destroy', function (req, res) {
-        Reservation.findOneAndRemove({_id : req.param('id')}, function (err, result) {
+        Reservation.update({_id : req.param('id')}, {reservation_status : 1}, function (err, result) {
             if(err){
                 console.log('/resv/destroy DB Error');
                 throw err;
@@ -67,7 +68,7 @@ function init(app, User, Restaurant, Reservation, Menu, randomString) {
     })
 
     app.post('/resv/cancel', function (req, res) {
-    	Reservation.update({reservation_id : req.param('reservation_id')}, {cancel_type : req.param('cancel_reason')}, function(err, result){
+    	Reservation.update({reservation_id : req.param('reservation_id')}, {reservation_status : 2, cancel_type : req.param('cancel_reason')}, function(err, result){
 		if(err){
 			console.log("/resv/cancel DB Error");
 			throw err;
