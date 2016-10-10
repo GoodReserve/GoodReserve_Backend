@@ -9,7 +9,7 @@
 }
 nav .restaurantName{
 	color : #993939 !important;
-	background-color: white;
+	background-color: #fbfafa;
 	padding : 0px 15px;
 	font-size: 2rem;
 	margin : 0px 15px;
@@ -24,6 +24,9 @@ nav .saleWrapper{
 	color: #993939;
 	font-size : 1.2rem;
 	padding : 7px 10px;
+}
+.saleWrapper .saleSettingButton{
+	margin : 0px 10px;
 }
 .content{
 	width : 100%;
