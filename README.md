@@ -354,19 +354,33 @@
     
     cancel_comment : cancel_reason이 3번 타입에 속할 경우, 특별한 취소 사유에 대한 파라미터입니다.
     
-> /bucket/add : 장바구니에 메뉴를 추가합니다.
+> /bucket/add : 장바구니를 생성하고, 메뉴를 추가합니다.
 
 >> Requiring Params
 
-    menu_id : 추가할 대상 메뉴의 고유 식별번호입니다.
-    
-    bucket_id : 추가할 대상 장바구니의 고유 식별번호입니다.
+    menus : 추가할 메뉴들의 배열입니다.
     
 >> Return Values
     
     HTTP Status 200, Bucket Schema
     
 -----
+
+
+> /bucket/update : 장바구니의 메뉴를 수정합니다.
+
+>> Requiring Params
+
+    menus : 수정된 메뉴의 배열입니다.
+    
+    bucket_id : 수정할 대상이 되는 장바구니의 고유 식별번호입니다.
+    
+>> Return Values
+    
+    HTTP Status 200, Update Result
+    
+-----
+
 
 > /bucket/info : 장바구니의 정보를 가져옵니다.
 
@@ -379,6 +393,7 @@
     HTTP Status 200, Bucket Schema
     
 ------
+
 
 > /bucket/destroy : 장바구니의 데이터를 파기합니다.
 
