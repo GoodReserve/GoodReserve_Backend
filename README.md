@@ -121,8 +121,8 @@
         0 : 선금결제
         1 : 현장결제
         
-    reservation_menu : Menu Object Array
-    예약한 메뉴의 리스트입니다.
+    reservation_menu : String
+    예약한 메뉴의 장바구니 고유 식별번호입니다.
     
     reservation_price : Number
     예약한 메뉴의 총 금액입니다.
@@ -132,6 +132,22 @@
     
     cancel_type : Number
     취소된 예약일 경우 취소된 사유를 나타내는 코드입니다.
+    
+    reservation_status : Number
+    예약의 현재 상태를 알려줍니다.
+        
+        0 : 아직 오지 않음
+        1 : 예약 일정 완료
+        2 : 예약 취소
+    
+
+> Bucket Schema
+
+    _id : String
+    장바구니의 고유 식별번호입니다.
+    
+    menus : String Array
+    장바구니에 추가된 메뉴들의 고유 식별번호 배열입니다.
     
     
     
@@ -292,7 +308,7 @@
     HTTP Status 200, Reservation Schema
     
 -----
-> /resv/destroy : 예약이 완료되었을때, DB에서 저장된 예약 정보를 파기합니다. POST
+> /resv/destroy : 예약이 완료되었을때, DB에 있는 예약의 현재 상태를 전환합니다. POST
 
 >> Requiring Params
 
@@ -337,4 +353,55 @@
     cancel_reason : 취소하는 사유에 대한 숫자 코드입니다.
     
     cancel_comment : cancel_reason이 3번 타입에 속할 경우, 특별한 취소 사유에 대한 파라미터입니다.
+    
+> /bucket/add : 장바구니를 생성하고, 메뉴를 추가합니다.
+
+>> Requiring Params
+
+    menus : 추가할 메뉴들의 배열입니다.
+    
+>> Return Values
+    
+    HTTP Status 200, Bucket Schema
+    
+-----
+
+
+> /bucket/update : 장바구니의 메뉴를 수정합니다.
+
+>> Requiring Params
+
+    menus : 수정된 메뉴의 배열입니다.
+    
+    bucket_id : 수정할 대상이 되는 장바구니의 고유 식별번호입니다.
+    
+>> Return Values
+    
+    HTTP Status 200, Update Result
+    
+-----
+
+
+> /bucket/info : 장바구니의 정보를 가져옵니다.
+
+>> Requiring Params
+
+    bucket_id : 정보를 가져올 대상 장바구니의 고유 식별번호입니다.
+    
+>> Return Values
+
+    HTTP Status 200, Bucket Schema
+    
+------
+
+
+> /bucket/destroy : 장바구니의 데이터를 파기합니다.
+
+>> Requiring Params
+
+    bucket_id : 정보를 파기할 대상 장바구니의 고유 식별번호입니다.
+    
+>> Return Values
+
+    HTTP Staus 200, Bucket Schema
         
