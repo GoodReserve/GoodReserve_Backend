@@ -133,6 +133,13 @@
     cancel_type : Number
     취소된 예약일 경우 취소된 사유를 나타내는 코드입니다.
     
+    reservation_status : Number
+    예약의 현재 상태를 알려줍니다.
+        
+        0 : 아직 오지 않음
+        1 : 예약 일정 완료
+        2 : 예약 취소
+    
 
 > Bucket Schema
 
@@ -301,7 +308,7 @@
     HTTP Status 200, Reservation Schema
     
 -----
-> /resv/destroy : 예약이 완료되었을때, DB에서 저장된 예약 정보를 파기합니다. POST
+> /resv/destroy : 예약이 완료되었을때, DB에 있는 예약의 현재 상태를 전환합니다. POST
 
 >> Requiring Params
 
