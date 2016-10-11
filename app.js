@@ -6,82 +6,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var randomString = require('randomstring');
-var Iamport = require('iamport');
-var iamport = new Iamport({
-    impKey : "2907976359420871",
-    impSecret : "Ox5lImi8pz6tdhEwonRCWXJ5hY0AeMz3jEp21HaqggTtyy0XVRzRPiX6hXGvKfz3UY5VGglWxfq6Nq3I"
-});
-//아임포트 기본 세팅
 var app = express();
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
-var schema = mongoose.Schema;
-
-var UserSchema = new schema({
-    _id: String,
-    name: String,
-    email: String,
-    password: String,
-    phone: String,
-    auth_token: String,
-    reservation: String,
-    reservation_waiting: String
-});
-
-var RestaurantSchema = new schema({
-    _id: String,
-    name: String,
-    menu: Array,
-    category: Array,
-    address: String,
-    reservation_max: Number,
-    reservation_current: Number,
-    phone: String,
-    reservation_cancel: Number,
-    reservation_check: Number,
-    benefit: Object,
-    thumbnail: String
-});
-
-var MenuSchema = new schema({
-    _id: String,
-    name: String,
-    price: Number,
-    restaurant : String,
-    thumbnail : String
-});
-
-var ReservationSchema = new schema({
-    _id: String,
-    restaurant_id : String,
-    restaurant_name: String,
-    reservation_time: Date,
-    reservation_people: Number,
-    reservation_payment: Number,
-    reservation_menu: Array,
-    reservation_price: Number,
-    reservation_code: String
-});
-
-var BucketSchema = new schema({
-    _id : String,
-    menus : Array,
-});
-
-var User = mongoose.model('users', UserSchema);
-var Restaurant = mongoose.model('restaurants', RestaurantSchema);
-var Menu = mongoose.model('menus', MenuSchema);
-var Reservation = mongoose.model('reservations', ReservationSchema);
-var Bucket = mongoose.model('buckets', Bucket);
-
-
-require('./routes/auth.js')(app, User, randomString);
-require('./routes/reservation.js')(app, User, Restaurant, Reservation, Menu, randomString);
-require('./routes/rest.js')(app, User, Restaurant, Menu, randomString);
-require('./routes/menu.js')(app, User, Restaurant, Menu, randomString);
-require('./routes/bucket.js')(app, Bucket, randomString);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

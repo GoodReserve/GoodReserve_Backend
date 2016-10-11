@@ -1,0 +1,11 @@
+.settingContent{
+	max-width: 994px;
+	margin: 50px auto;
+}
+.collapsible-header{
+	font-size: 1.3em;
+	font-weight : bold;
+}
+.collapsible-body{
+	padding: 25px;
+}
