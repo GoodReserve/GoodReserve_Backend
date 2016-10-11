@@ -30,7 +30,6 @@ nav .saleWrapper{
 }
 .content{
 	width : 100%;
-	height : calc(100vh - 64px);
 }
 .WaitListCard{
 	background : white;
