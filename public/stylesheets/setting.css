@@ -1,5 +1,5 @@
 .settingContent{
-	max-width: 994px;
+	max-width: 1024px;
 	margin: 50px auto;
 }
 .collapsible-header{
@@ -7,5 +7,5 @@
 	font-weight : bold;
 }
 .collapsible-body{
-	padding: 25px;
+	padding: 25px 10px;
 }

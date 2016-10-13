@@ -9,11 +9,12 @@
     <link rel='stylesheet' href='/stylesheets/setting.css'/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="/javascripts/common.js"></script>
+    <script src="/javascripts/setting.js"></script>
   </head>
   <body>
   <nav>
   <div class="nav-wrapper MainDarkRed valign-wrapper">
-  	<a href="#" class="restaurantName"><%= restaurantName %></a>
+  	<a href="/" class="restaurantName"><%= restaurantName %></a>
   </div>
   </nav>
   <div class="content">
@@ -21,7 +22,32 @@
   <ul class="collapsible" data-collapsible="accordion">
     <li>
       <div class="collapsible-header active"><strong class="MainDarkRed-text">메뉴 설정</strong></div>
-      <div class="collapsible-body">asdf</div>
+      <div class="collapsible-body">
+      	<% for(var i = 0; i<8; i++) { %>
+	  <div class="MenuCard">
+	    <div class="MenuImage left" style="background-image : url(/images/sample.png);">
+	    </div><!--
+	    --><div class="row MenuDetail right MainDarkRed-text">
+	      <div>
+	    	<a class="right MainDarkRed-text" href="#!">
+	        <i class="material-icons">&#xE5CD;</i>
+		</a>
+	      </div>
+	      <div class="input-field col s12">
+	        <input type="text" id="menuName" placeholder=" "/>
+		<label for="menuName">메뉴 이름</label>
+	      </div>
+	      <div class="input-field col s12">
+	        <input type="text" id="totalPrice" placeholder=" "/>
+		<label for="totalPrice">합계 금액</label>
+	      </div>
+	    </div>
+	  </div>
+	<% } %>
+	<div class="addCard center-align">
+	  <i class="material-icons MainDarkRed-text">&#xE145;</i>
+	</div>
+      </div>
     </li>
     <li>
       <div class="collapsible-header"><strong class="MainDarkRed-text">좌석 설정</strong></div>

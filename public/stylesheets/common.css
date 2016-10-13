@@ -40,9 +40,19 @@ nav .saleWrapper{
 	overflow : hidden;
 	border-radius: 15px;
 }
+.imageAddContainer{
+	width: 100%;
+	height: 100%;
+}
+.imageAddContainer a{
+	margin: auto;
+}
 .WaitListCardHeader{
 	background-color: #EAEAEA;
 	height : 30px;
+}
+.MenuDetail div a i.material-icons{
+	margin: 5px;
 }
 .WaitListCardHeader span{
 	font-size:1.1em;
@@ -86,12 +96,54 @@ nav .saleWrapper{
 	margin-left: 15px;
 	margin-right: 5px;
 }
+.MenuCard{
+	width:315px;
+	height: 200px;
+	overflow: hidden;
+	display: inline-block;
+	border-radius: 15px;
+	background: white;
+	margin: 8px;
+	box-shadow : 0px 1px 3px 1px black;
+}
+.addCard{
+	width: 315px;
+	height: 200px;
+	overflow: hidden;
+	display: inline-block;
+	border-radius: 15px;
+	border : solid 2px #993939;
+	margin: 8px;
+}
+.addCard:hover{
+	cursor : pointer;
+}
+.addCard i{
+	line-height: 200px;
+	font-size: 4rem;
+}
+.MenuImage, .MenuDetail{
+	height: 100%;
+	display: inline-block;
+}
+.MenuImage{
+	width: 45%;
+	background : gray;
+	background-position : center center;
+	background-repeat : no-repeat;
+	background-size : cover;
+}
+.MenuDetail{
+	width: 55%;
+}
 .MainDarkRed-text{
 	color: #993939 !important;
 }
 .MainContentHeader{
 	font-size:1.7em;
 	height: 60px;
+	margin:0;
+	border:0;
 	font-weight: bold;
 	padding: 15px;
 }
@@ -116,4 +168,31 @@ nav .saleWrapper{
 	font-weight: bold;
 	margin: 0;
 	font-size: 1.7em;
+}
+/* label color */
+.input-field label {
+        color: #993939;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+	 color: #993939;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+	border-bottom: 1px solid #993939;
+	box-shadow: 0 1px 0 0 #993939;
+}
+/* valid color */
+.input-field input[type=text].valid {
+	border-bottom: 1px solid #993939;
+	box-shadow: 0 1px 0 0 #993939;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+	border-bottom: 1px solid #993939;
+	box-shadow: 0 1px 0 0 #993939;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+	color: #993939;
 }
