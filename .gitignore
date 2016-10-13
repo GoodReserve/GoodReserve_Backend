@@ -1,1 +1,4 @@
 routes/
+app.js
+bin/
+node_modules/

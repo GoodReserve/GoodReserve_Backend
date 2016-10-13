@@ -6,17 +6,12 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var randomString = require('randomstring');
-var Iamport = require('iamport');
-var iamport = new Iamport({
-    impKey : "2907976359420871",
-    impSecret : "Ox5lImi8pz6tdhEwonRCWXJ5hY0AeMz3jEp21HaqggTtyy0XVRzRPiX6hXGvKfz3UY5VGglWxfq6Nq3I"
-});
-//아임포트 기본 세팅
 var app = express();
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+<<<<<<< HEAD
 var schema = mongoose.Schema;
 
 var UserSchema = new schema({
@@ -90,6 +85,8 @@ require('./routes/rest.js')(app, User, Restaurant, Menu, randomString);
 require('./routes/menu.js')(app, User, Restaurant, Menu, randomString);
 require('./routes/bucket.js')(app, Bucket, randomString);
 
+=======
+>>>>>>> 9f3c89f68dd9bc502eceaf0845284e52c443cd99
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
