@@ -10,8 +10,6 @@ var app = express();
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
-<<<<<<< HEAD
 var schema = mongoose.Schema;
 
 var UserSchema = new schema({
@@ -84,9 +82,6 @@ require('./routes/reservation.js')(app, User, Restaurant, Reservation, Menu, ran
 require('./routes/rest.js')(app, User, Restaurant, Menu, randomString);
 require('./routes/menu.js')(app, User, Restaurant, Menu, randomString);
 require('./routes/bucket.js')(app, Bucket, randomString);
-
-=======
->>>>>>> 9f3c89f68dd9bc502eceaf0845284e52c443cd99
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

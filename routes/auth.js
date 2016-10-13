@@ -125,7 +125,7 @@ function init(app, User, randomString) {
 
     app.post('/auth/local/login', function (req, res) {
         console.log("User Login : " + req.param('email'));
-        user.findOne({email : req.param('email')}, function (err, result) {
+        User.findOne({email : req.param('email')}, function (err, result) {
             if(err){
                 console.log("/auth/local/login failed");
                 throw err;
