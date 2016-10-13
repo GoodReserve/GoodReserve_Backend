@@ -55,7 +55,8 @@ var ReservationSchema = new schema({
     reservation_payment: Number,
     reservation_menu: Array,
     reservation_price: Number,
-    reservation_code: String
+    reservation_code: String,
+    reservation_status : Number
 });
 
 var BucketSchema = new schema({

@@ -4,7 +4,7 @@
 
 module.exports = init;
 
-function init(app, User, Restaurant, randomString) {
+function init(app, User, Restaurant, Menu, randomString) {
     var multer = require('multer');
     var upload = multer({
         dest : './photos/',
