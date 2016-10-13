@@ -70,11 +70,18 @@ var BucketSchema = new schema({
     menus : Array,
 });
 
+mongoose.connect("mongodb://localhost:27017/goodreserve", function (err) {
+    if(err){
+        console.log("MongoDB Error");
+        throw err;
+    }
+});
+
 var User = mongoose.model('users', UserSchema);
 var Restaurant = mongoose.model('restaurants', RestaurantSchema);
 var Menu = mongoose.model('menus', MenuSchema);
 var Reservation = mongoose.model('reservations', ReservationSchema);
-var Bucket = mongoose.model('buckets', Bucket);
+var Bucket = mongoose.model('buckets', BucketSchema);
 
 
 require('./routes/auth.js')(app, User, randomString);
