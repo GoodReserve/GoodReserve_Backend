@@ -4,10 +4,39 @@
 	padding : 10% 20px;
 	max-width: 400px;
 }
+.signInContainer{
+	margin: auto;
+	opacity: 0.8;
+	padding : 10% 20px;
+	max-width: 994px;
+}
 body{
  	background : url(/images/Background.png) center center no-repeat;
 	background-size : cover;
 	min-height: 100vh;
+}
+.logo{
+	width: 70%;
+	margin:auto;
+	min-width: 100px;
+	max-width: 400px;
+}
+.valign{
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.image{
+	text-align:center;
+	color: white;
+}
+.image img{
+	margin: auto;
+}
+img[width=70%]{
+	margin: auto;
 }
 .inputForm{
 	display: block;
@@ -31,6 +60,21 @@ body{
 	white-space: none;
 	color: white;
 	border : none;
+}
+.half{
+	height : 353px;
+	display: inline-block;
+	width: calc(96% - 353px);
+	margin : 1%;
+	float : right;
+}
+.image{
+	float : left;
+	width: 353px;
+	box-sizing: border-box;
+	border : 2px solid white;
+	border-radius: 7px;
+	text-align: center;
 }
 .loginContainer ul{
 	height: 1.1rem;
