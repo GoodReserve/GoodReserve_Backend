@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5033facb-fcb4-4339-a515-c8b118f9739d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="5033facb-fcb4-4339-a515-c8b118f9739d" name="Default" comment="" />
     <ignored path="GoodReserve_Backend.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -27,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="308">
+              <first_editor relative-caret-position="7938">
                 <caret line="378" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="406" selection-end-column="8" />
                 <folding />
               </first_editor>
@@ -42,7 +40,7 @@
       <file leaf-file-name="rest.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/rest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
+            <state relative-caret-position="588">
               <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
               <folding />
             </state>
@@ -62,7 +60,7 @@
       <file leaf-file-name="bucket.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/bucket.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
+            <state relative-caret-position="1134">
               <caret line="56" column="1" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
               <folding>
                 <element signature="e#0#50#0" expanded="false" />
@@ -86,7 +84,7 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
+            <state relative-caret-position="657">
               <caret line="134" column="56" selection-start-line="134" selection-start-column="56" selection-end-line="134" selection-end-column="56" />
               <folding />
             </state>
@@ -137,8 +135,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="829" />
-    <option name="width" value="611" />
+    <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -308,15 +305,24 @@
       <workItem from="1475933271021" duration="1017000" />
       <workItem from="1476107068290" duration="3486000" />
       <workItem from="1476173131079" duration="502000" />
+<<<<<<< Updated upstream
       <workItem from="1476342165180" duration="2676000" />
+=======
+      <workItem from="1476342165180" duration="2435000" />
+      <workItem from="1476424488257" duration="17000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="26979000" />
+=======
+    <option name="totallyTimeSpent" value="26755000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
-    <frame x="829" y="0" width="611" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15423729" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -701,7 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -717,7 +722,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/bucket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
+        <state relative-caret-position="1134">
           <caret line="56" column="1" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
           <folding>
             <element signature="e#0#50#0" expanded="false" />
@@ -727,7 +732,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/rest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
+        <state relative-caret-position="588">
           <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
           <folding />
         </state>
@@ -737,14 +742,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
           <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="308">
+          <first_editor relative-caret-position="7938">
             <caret line="378" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="406" selection-end-column="8" />
             <folding />
           </first_editor>
@@ -765,7 +769,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
+        <state relative-caret-position="657">
           <caret line="134" column="56" selection-start-line="134" selection-start-column="56" selection-end-line="134" selection-end-column="56" />
           <folding />
         </state>
