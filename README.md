@@ -183,6 +183,8 @@
     password : 사용자의 비밀번호입니다.
     password_chk : 사용자의 비밀번호 확인란의 값입니다.
     email : 사용자의 이메일입니다.
+    user_type : 사용자 계정의 종류입니다. UserSchema를 참조해주세요.
+    user_restaurant : 사용자가 업주일떄 자신의 음식점에 대한 고유 식별번호 입니다.
     
 >> Return Values
 
