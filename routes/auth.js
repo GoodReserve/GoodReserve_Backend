@@ -135,6 +135,7 @@ function init(app, User, randomString) {
     app.post('/auth/local/login', function (req, res) {
         console.log("User Login : " + req.param('email'));
         User.findOne({email : req.param('email')}, function (err, result) {
+            console.log("DB Founded : "+ result);
             if(err){
                 console.log("/auth/local/login failed");
                 throw err;
@@ -143,7 +144,6 @@ function init(app, User, randomString) {
                 console.log("Unvalid User Infomation");
                 res.send(402, "Unvalid User Infomation");
             }
-            console.log("DB Founded : "+ result);
             else if(result.password == req.param('password')){
                 console.log("User "+ result.name + "Logged In");
                 var response = {
