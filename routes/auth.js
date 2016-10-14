@@ -144,7 +144,7 @@ function init(app, User, randomString) {
                 res.send(402, "Unvalid User Infomation");
             }
             console.log("DB Founded : "+ result);
-            if(result.password == req.param('password')){
+            else if(result.password == req.param('password')){
                 console.log("User "+ result.name + "Logged In");
                 var response = {
                     _id : result._id,
