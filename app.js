@@ -79,12 +79,6 @@ var Menu = mongoose.model('menus', MenuSchema);
 var Reservation = mongoose.model('reservations', ReservationSchema);
 var Bucket = mongoose.model('buckets', BucketSchema);
 
-
-require('./routes/auth.js')(app, User, randomString);
-require('./routes/reservation.js')(app, User, Restaurant, Reservation, Menu, randomString);
-require('./routes/rest.js')(app, User, Restaurant, Menu, randomString);
-require('./routes/menu.js')(app, User, Restaurant, Menu, randomString);
-require('./routes/bucket.js')(app, Bucket, randomString);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -99,6 +93,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+
+require('./routes/auth.js')(app, User, randomString);
+require('./routes/reservation.js')(app, User, Restaurant, Reservation, Menu, randomString);
+require('./routes/rest.js')(app, User, Restaurant, Menu, randomString);
+require('./routes/menu.js')(app, User, Restaurant, Menu, randomString);
+require('./routes/bucket.js')(app, Bucket, randomString);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
