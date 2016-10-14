@@ -149,7 +149,7 @@ function init(app, User, randomString) {
                 console.log("Unvalid User Infomation");
                 res.send(402, "Unvalid User Infomation");
             }
-            else if(result.password == req.param('password')){
+            else if(req.param('email') != undefined && result.password == req.param('password')){
                 console.log("User "+ result.name + "Logged In");
                 var response = {
                     _id : result._id,
