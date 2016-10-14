@@ -139,6 +139,10 @@ function init(app, User, randomString) {
                 console.log("/auth/local/login failed");
                 throw err;
             }
+            if(req.param('email') == undefined){
+                console.log("Unvalid User Infomation");
+                res.send(402, "Unvalid User Infomation");
+            }
             console.log("DB Founded : "+ result);
             if(result.password == req.param('password')){
                 console.log("User "+ result.name + "Logged In");
