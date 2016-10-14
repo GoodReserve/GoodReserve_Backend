@@ -222,6 +222,10 @@
     >> Unvalid User Info
         
         HTTP Status 402
+    
+    >> Can't find User Info
+    
+        HTTP Status 403
         
 -----
 > /rest/add : 업소의 정보를 추가합니다. POST
