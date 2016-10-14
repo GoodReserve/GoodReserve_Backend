@@ -29,6 +29,15 @@
     reservation_waiting : String Array
     사용자의 찜목록에 있는 요소들의 고유 식별번호입니다.
     
+    user_type : Number
+    사용자 계정의 유형입니다.
+        
+        0 : 일반 사용자
+        1 : 업주
+        
+    user_restaurant : String
+    업주일 경우 자신이 운영하는 업소에 해당하는 고유 식별번호입니다.
+    
 
 > Restaurant Schema
     

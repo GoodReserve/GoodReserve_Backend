@@ -85,7 +85,9 @@ function init(app, User, randomString) {
             email : req.param('email'),
             reservation : "",
             reservation_waiting : [],
-            auth_token : randomString.generate(15)
+            auth_token : randomString.generate(15),
+            user_type : req.param('user_type'),
+            user_restaurant : req.param('user_restaurant')
         });
         if(req.param('password') == req.param('password_chk')){
             user.save(function (err) {
@@ -103,7 +105,9 @@ function init(app, User, randomString) {
                         phone : user.phone,
                         auth_token : user.auth_token,
                         reservation : user.reservation,
-                        reservation_waiting : user.reservation_waiting
+                        reservation_waiting : user.reservation_waiting,
+                        user_type : user.user_type,
+                        user_restaurant : user.user_restaurant
                     };
                     res.send(200, response);
                 }
@@ -126,7 +130,8 @@ function init(app, User, randomString) {
                 phone : result.phone,
                 auth_token : result.auth_token,
                 reservation : result.reservation,
-                reservation_waiting : result.reservation_waiting
+                reservation_waiting : result.reservation_waiting,
+                user_type : result.user_type
             };
             res.send(200, response);
         });
