@@ -202,7 +202,26 @@ nav .saleWrapper{
         color: #993939;
 }
 /* label focus color */
-.input-field input[type=text]:focus + label {
+.input-field input:focus + label {
+	 color: #993939;
+}
+/* label underline focus color */
+.input-field input[type=time]:focus {
+	border-bottom: 1px solid #993939;
+	box-shadow: 0 1px 0 0 #993939;
+}
+/* valid color */
+.input-field input[type=time].valid {
+	border-bottom: 1px solid #993939;
+	box-shadow: 0 1px 0 0 #993939;
+}
+/* invalid color */
+.input-field input[type=time].invalid {
+	border-bottom: 1px solid #993939;
+	box-shadow: 0 1px 0 0 #993939;
+}
+/* label focus color */
+.input-field input[type=time]:focus + label {
 	 color: #993939;
 }
 /* label underline focus color */
@@ -220,7 +239,28 @@ nav .saleWrapper{
 	border-bottom: 1px solid #993939;
 	box-shadow: 0 1px 0 0 #993939;
 }
+/* label focus color */
+.input-field input[type=number]:focus + label {
+	 color: #993939;
+}
+/* label underline focus color */
+.input-field input[type=number]:focus {
+	border-bottom: 1px solid #993939;
+	box-shadow: 0 1px 0 0 #993939;
+}
+/* valid color */
+.input-field input[type=number].valid {
+	border-bottom: 1px solid #993939;
+	box-shadow: 0 1px 0 0 #993939;
+}
+/* invalid color */
+.input-field input[type=number].invalid {
+	border-bottom: 1px solid #993939;
+	box-shadow: 0 1px 0 0 #993939;
+}
 /* icon prefix focus color */
 .input-field .prefix.active {
 	color: #993939;
 }
+
+
