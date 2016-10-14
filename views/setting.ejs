@@ -119,7 +119,60 @@
     <li>
       <div class="collapsible-header"><strong class="MainDarkRed-text">예약 설정</strong></div>
       <div class="collapsible-body">
-      	<p>asdf</p>
+	   		<h5 class="center-align MainDarkRed-text"><strong>예약 가능 시간 설정</strong></h5>
+      	<div class="center-align">
+	      	<span class="dateSelector">월</span>
+	      	<span class="dateSelector active">화</span>
+	      	<span class="dateSelector">수</span>
+	      	<span class="dateSelector">목</span>
+	      	<span class="dateSelector">금</span>
+	      	<span class="dateSelector">토</span>
+	      	<span class="dateSelector">일</span>
+	    	</div>
+	   		<div class="center-align">
+					<div class="timePicker-wrapper">
+						<div class="input-field">
+							<input type="time" id="startTime"/>
+							<label for="startTime">영업 시작</label>
+						</div>
+					</div>
+					<div class="timePicker-wrapper">
+						<div class="input-field">
+							<input type="time" id="endTime"/>
+							<label for="endTime">영업 종료</label>
+						</div>
+					</div>
+	    	</div><br>
+				<h5 class="center-align MainDarkRed-text"><strong>예약 취소 가능 시간</strong></h5>
+				<div class="center-align">
+					<div class="timePicker-wrapper">
+						<div class="input-field">
+							<input type="number" min="0" class="validate">
+						</div>
+					</div>
+					<span class="MainDarkRed-text">일</span>
+					<div class="timePicker-wrapper">
+						<div class="input-field">
+							<input type="number" min="0" class="validate">
+						</div>
+					</div>
+					<span class="MainDarkRed-text">시간</span>
+					<div class="timePicker-wrapper">
+						<div class="input-field">
+							<input type="number" min="0" class="validate">
+						</div>
+					</div>
+					<span class="MainDarkRed-text">분 전</span>
+				</div>
+				<br>
+				<h5 class="center-align MainDarkRed-text"><strong>결제 방식</strong></h5>
+				<div class="center-align">
+					<div class="center-align purchaseSelector active">현장 결제</div>
+					<div class="center-align purchaseSelector">사전 결제</div>
+				</div>
+				<h5 class="center-align MainDarkRed-text"><strong>업주의 말</strong></h5>
+				<textarea></textarea>
+				<div class="submitButton MainDarkRed white-text center-align">변경사항 저장하기</div>
       </div>
     </li>
   </ul>

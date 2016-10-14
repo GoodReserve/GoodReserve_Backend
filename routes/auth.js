@@ -55,10 +55,19 @@ function init(app, User, randomString) {
     app.get('/auth/facebook/token', passport.authenticate('facebook-token'), function (req, res) {
         console.log("user token : " + req.param('access_token'));
         if(req.user){
-            res.send(200, req.user);
+            var response = {
+                _id : req.user.id,
+                name : req.user.displayName,
+                email : req.user.email,
+                phone : req.user.phone,
+                reservation : "",
+                reservation_waiting : [],
+                auth_token : req.param('access_token')
+            };
+            res.send(200, response);
         }
         else if(!req.user){
-            res.send(401, req.user);
+            res.send(401, "Can't find User On Facebook. It May Be Unusable.");
         }
     });
 

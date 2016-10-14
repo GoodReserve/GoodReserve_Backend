@@ -9,3 +9,62 @@
 .collapsible-body{
 	padding: 25px 10px;
 }
+.dateSelector.active {
+    color: white;
+    background: rgb(153, 57, 57);
+}
+.dateSelector {
+    font-size: 1.5em;
+    color: rgb(153, 57, 57);
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(153, 57, 57);
+    border-image: initial;
+    margin: 15px;
+    border-radius: 5px;
+}
+.dateSelector:hover{
+	cursor: hover;
+}
+.timePicker-wrapper{
+	width: 180px;
+	display: inline-block;
+	margin: 15px;
+}
+.purchaseSelector{
+	width : 200px;
+	padding : 10px;
+	margin : 15px;
+	border-radius : 7px;
+	display: inline-block;
+	border : 1px solid #993939;
+	color : #993939;
+}
+.purchaseSelector:hover{
+	cursor: pointer;
+}
+.purchaseSelector.active{
+	background : #993939;
+	color : white;
+}
+textarea{
+	border: 1px solid #993939;
+	color : #993939;
+	width : 350px;
+	min-height: 100px;
+	display: block;
+	margin : auto;
+	resize: none;
+	border-radius: 5px;
+	text-align: center;
+}
+.submitButton{
+	padding: 10px;
+	border-radius: 7px;
+	width : 200px;
+	margin : 20px auto;
+}
+.submitButton:hover{
+	cursor:pointer;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GoodReserve purchase test page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel='stylesheet' href="/stylesheets/common.css" />
+    <link rel='stylesheet' href='/stylesheets/login.css'/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="/javascripts/common.js"></script>
+    <script src="/javascripts/login.js"></script>
+  </head>
+  <body>
+	<div class="loginContainer">
+		<img width="100%" src="/images/logo_login_logo.png"/>
+		<form action="/auth/login" method="POST">
+			<input class="inputForm" placeholder="아이디">
+			<input class="inputForm" type="password" placeholder="비밀번호">
+			<input class="submitButton" type="submit" value="로그인">
+		</form>
+		<ul>
+			<li><a href="#!"><span>비밀번호 찾기</span><img height="100%" src="/images/ic_login_findpw.png"></a></li>
+			<li><a href="#!"><span>회원가입</span><img height="100%" src="/images/ic_login_signin.png"></a></li>
+		</ul>
+	</div>
+  </body>
+</html>
