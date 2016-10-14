@@ -1,0 +1,53 @@
+.loginContainer{
+	margin: auto;
+	opacity: 0.8;
+	padding : 10% 20px;
+	max-width: 400px;
+}
+body{
+ 	background : url(/images/Background.png) center center no-repeat;
+	background-size : cover;
+	min-height: 100vh;
+}
+.inputForm{
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	background: none;
+	margin : 10px 0px;
+	padding : 8px;
+	color: white;
+	font-size : 1.1em;
+	border : 1px solid white;
+	border-radius: 5px;
+}
+.submitButton{
+	display: block;
+	width: 100%;
+	font-size : 1.1em;
+	background : #993939;
+	border-radius :7px;
+	padding: 10px;
+	white-space: none;
+	color: white;
+	border : none;
+}
+.loginContainer ul{
+	height: 1.1rem;
+	line-height: 1.1rem;
+	font-size : 1rem;
+	float:right;
+	color : white;
+}
+.loginContainer ul li{
+	list-style: none;
+	margin : 0px 10px;
+	display: inline-block;
+}
+ul li img{
+	margin : 0px 5px;
+}
+a{
+	color:white;
+	text-decoration : none;
+}
