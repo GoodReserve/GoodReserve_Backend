@@ -7,9 +7,6 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var randomString = require('randomstring');
 var app = express();
-
-var routes = require('./routes/index');
-var users = require('./routes/users');
 var schema = mongoose.Schema;
 
 var UserSchema = new schema({
@@ -66,6 +63,8 @@ var BucketSchema = new schema({
     menus : Array,
 });
 
+
+
 mongoose.connect("mongodb://localhost:27017/goodreserve", function (err) {
     if(err){
         console.log("MongoDB Error");
@@ -78,6 +77,8 @@ var Restaurant = mongoose.model('restaurants', RestaurantSchema);
 var Menu = mongoose.model('menus', MenuSchema);
 var Reservation = mongoose.model('reservations', ReservationSchema);
 var Bucket = mongoose.model('buckets', BucketSchema);
+var routes = require('./routes/index')(app, Reservation, Menu, Restaurant);
+var users = require('./routes/users');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
