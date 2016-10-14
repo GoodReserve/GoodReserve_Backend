@@ -145,26 +145,32 @@ function init(app, User, randomString) {
                 console.log("/auth/local/login failed");
                 throw err;
             }
-            if(req.param('email') == undefined){
-                console.log("Unvalid User Infomation");
-                res.send(402, "Unvalid User Infomation");
+            if(result) {
+                if (req.param('email') == undefined) {
+                    console.log("Unvalid User Infomation");
+                    res.send(402, "Unvalid User Infomation");
+                }
+                else if (req.param('email') != undefined && result.password == req.param('password')) {
+                    console.log("User " + result.name + "Logged In");
+                    var response = {
+                        _id: result._id,
+                        email: result.email,
+                        name: result.name,
+                        phone: result.phone,
+                        auth_token: result.auth_token,
+                        reservation: result.reservation,
+                        reservation_waiting: result.reservation_waiting
+                    };
+                    res.send(200, response);
+                }
+                else if (result.password != res.param('password')) {
+                    console.log("Password Error!");
+                    res.send(401, "Access Denied");
+                }
             }
-            else if(req.param('email') != undefined && result.password == req.param('password')){
-                console.log("User "+ result.name + "Logged In");
-                var response = {
-                    _id : result._id,
-                    email : result.email,
-                    name : result.name,
-                    phone : result.phone,
-                    auth_token : result.auth_token,
-                    reservation : result.reservation,
-                    reservation_waiting : result.reservation_waiting
-                };
-                res.send(200, response);
-            }
-            else if(result.password != res.param('password')){
-                console.log("Password Error!");
-                res.send(401, "Access Denied");
+            else{
+                console.log("Can't Find User Data");
+                res.send(403, "Cant't Find User Data");
             }
         })
     });
