@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GoodReserve purchase test page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel='stylesheet' href="/stylesheets/common.css" />
+    <link rel='stylesheet' href='/stylesheets/login.css'/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="/javascripts/common.js"></script>
+    <script src="/javascripts/login.js"></script>
+  </head>
+  <body>
+	<div class="signInContainer">
+		<div class="logo">
+		<img width="100%" src="/images/logo_login_logo.png"/>
+		</div>
+		<form action="/auth/login" method="POST">
+			<div class="half image">
+				<div class="valign">
+					<img src="/images/ic_signup_cam.png">
+					<p>매장 사진을 등록해주세요</p>
+				</div>
+			</div><!--
+			--><div class="half">
+			<input class="inputForm" placeholder="매장 명">
+			<input class="inputForm" placeholder="아이디">
+			<input class="inputForm" type="password" placeholder="비밀번호">
+			<input class="inputForm" type="password" placeholder="비밀번호 확인">
+			<input class="inputForm" placeholder="매장 전화번호">
+			<input class="inputForm" placeholder="주소">
+			<input class="inputForm" placeholder="카카오톡 아이디">
+			</div>
+			<input class="submitButton" type="submit" value="회원 가입">
+		</form>
+	</div>
+  </body>
+</html>
