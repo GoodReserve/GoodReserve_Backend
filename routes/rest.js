@@ -51,5 +51,14 @@ function init(app, User, Restaurant, Menu, randomString) {
         });
     });
 
+    app.post('/rest/list', function (err, result) {
+        if(err){
+            console.log('/rest/list db error');
+            throw err;
+        }
+        console.log("Getting Rest List : "+ result);
+        res.send(200, result);
+    })
+
     //function end
 }
