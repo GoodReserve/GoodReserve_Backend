@@ -8,7 +8,7 @@ function init(app, Bucket, randomString) {
     app.post('/bucket/add', function (req, res) {
         var bucket = new Bucket({
             _id : randomString.generate(13),
-            menus : req.param('menus')
+            menus : []
         });
         bucket.save(function (err, silence) {
             if(err){
