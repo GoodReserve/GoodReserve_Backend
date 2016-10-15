@@ -351,6 +351,8 @@
 
     restaurant_id : 예약하는 식당의 고유 식별번호입니다.
     
+    reservation_maker : 예약하는 사람의 고유 식별번호입니다.
+    
     reservation_time : 예약한 시간입니다.
     
     reservation_people : 예약한 사람의 수입니다.
@@ -365,7 +367,7 @@
 
     HTTP Status 200, Reservation Schema
     
-    -----
+-----
 > /resv/search : 예약의 고유 식별번호(_id)를 이용하여 예약 정보를 조회합니다. POST
 
 >> Requiring Params
