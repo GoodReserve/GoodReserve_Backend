@@ -28,16 +28,26 @@ function init(app, User, Restaurant, Menu, randomString) {
             },
             thumbnail : req.files
         });
-        if(rest.name != null){
-            rest.save(function (err, silence) {
-                if(err){
-                    console.log('/rest/add DB Error');
-                    throw err;
-                }
-                console.log(rest + " Has Added!");
-                res.send(200, rest);
-            });
-        }
+        Restaurant.find({address : req.param('address')}, function (err, result) {
+            if(err){
+                console.log("/rest/add DB Error");
+                throw err;
+            }
+            if(result.length !=0){
+                console.log("Restaurant With Same Address Has Already Exists!");
+                res.send(409, "Restaurant With Same Address Has Already Exists!");
+            }
+            else if(result.length == 0 && rest.name != null){
+                rest.save(function (err, silence) {
+                    if(err){
+                        console.log('/rest/add DB Error');
+                        throw err;
+                    }
+                    console.log(rest + " Has Added!");
+                    res.send(200, rest);
+                });
+            }
+        })
     });
 
     app.post('/rest/search', function (req, res) {
