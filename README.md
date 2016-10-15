@@ -112,6 +112,9 @@
     _id : String
     예약의 고유 식별번호 입니다.
     
+    restaurant_maker : String
+    예약을 만든 사람입니다.
+    
     restaurant_id : String
     예약한 식당의 고유 식별번호입니다.
     
