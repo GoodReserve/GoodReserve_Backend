@@ -7,43 +7,49 @@ function init(app, Reservation, Menu, Restaurant) {
 
     /* GET home page. */
     router.get('/', function (req, res, next) {
-        res.render('index', {
-            restaurantName: "레스토랑 태윤 드 프리미엄",
-            reserveList: Reservation.find({restaurant_id: req.param('restaurant_id')}, function (err, resv_result) {
-                if (err) {
-                    console.log("routing reservation find Error");
-                    throw err;
-                }
-                return resv_result;
-            }),
+        Restaurant.findOne({_id : req.session.restaurant_id}).exec(function (err, result) {
+            if(err){
+                console.log('index.js router.get / db Error');
+                throw err;
+            }
+            res.render('index', {
+                restaurantName: result.name,
+                reserveList: Reservation.find({restaurant_id: req.session.restaurant_id}, function (err, resv_result) {
+                    if (err) {
+                        console.log("routing reservation find Error");
+                        throw err;
+                    }
+                    return resv_result;
+                }),
 
-        /*
-         TODO :
-         reserveList : Object[]{
-         startTime
-         endTime
-         code
-         name
-         callNumber
-         menu : Object[]{
-         name
-         amount
-         }
-         totalPrice
-         }
-         */
-    });
+                /*
+                 TODO :
+                 reserveList : Object[]{
+                 startTime
+                 endTime
+                 code
+                 name
+                 callNumber
+                 menu : Object[]{
+                 name
+                 amount
+                 }
+                 totalPrice
+                 }
+                 */
+            });
+        })
     });
 
     router.get('/setting', function (req, res) {
-        Restaurant.findOne({_id: req.param('restaurant_id')}, function (err, result) {
+        Restaurant.findOne({_id: req.session.restaurant_id}, function (err, result) {
             if (err) {
                 console.log('router restaurant find db error');
                 throw err;
             }
             res.render('setting', {
-                restaurantName: "레스토랑 태윤 드 프리미엄",
-                menus: Menu.find({restaurant: req.param('restaurant_id')}, function (err, menu_result) {
+                restaurantName: result.name,
+                menus: Menu.find({restaurant: req.session.restaurant_id}, function (err, menu_result) {
                     if (err) {
                         console.log('router setting db error');
                         throw err;

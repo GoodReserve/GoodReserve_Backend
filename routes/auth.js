@@ -7,6 +7,18 @@ module.exports = init;
 function init(app, User, randomString) {
     var passport = require('passport');
     var FacebookTokenStrategy = require('passport-facebook-token');
+    var session = require('express-session');
+    var sessionStore = require('sessionstore');
+    store = sessionStore.createSessionStore();
+
+    app.use(session({
+        store : store,
+        secret : 'goodreserve',
+        cookie : {
+            path : '/',
+            expires : false
+        }
+    }))
 
     app.use(passport.initialize());
     app.use(passport.session());
@@ -171,6 +183,7 @@ function init(app, User, randomString) {
                         reservation: result.reservation,
                         reservation_waiting: result.reservation_waiting
                     };
+                    req.session.restaurant_id = result.restaurant_id;
                     res.send(200, response);
                 }
                 else if (result.password != req.param('password')) {
