@@ -44,5 +44,16 @@ function init(app, User, Restaurant, Menu, randomString) {
         });
     });
 
+    app.post('/menu/rest/list', function (req, res) {
+        Menu.find({restaurant : req.param('restaurant_id')}, function (err, result) {
+            if(err){
+                console.log('/menu/rest/list db error');
+                throw err;
+            }
+            console.log("Restaurant " + req.param('restaurant_id') + "'s menu : "+ result);
+            res.send(200, result);
+        });
+    });
+
     //function end
 }
