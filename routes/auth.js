@@ -158,7 +158,7 @@ function init(app, User, randomString) {
             if(result) {
                 if (req.param('email') == undefined) {
                     console.log("Unvalid User Infomation");
-                    res.send(402, "Unvalid User Infomation");
+                    res.send(403, "Unvalid User Infomation");
                 }
                 else if (req.param('email') != undefined && result.password == req.param('password')) {
                     console.log("User " + result.name + "Logged In");
@@ -175,12 +175,12 @@ function init(app, User, randomString) {
                 }
                 else if (result.password != req.param('password')) {
                     console.log("Password Error!");
-                    res.send(401, "Access Denied");
+                    res.send(400, "Access Denied");
                 }
             }
             else{
                 console.log("Can't Find User Data");
-                res.send(403, "Cant't Find User Data");
+                res.send(400, "Cant't Find User Data");
             }
         })
     });
