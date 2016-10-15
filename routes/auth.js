@@ -163,7 +163,7 @@ function init(app, User, randomString) {
                     };
                     res.send(200, response);
                 }
-                else if (result.password != res.param('password')) {
+                else if (result.password != req.param('password')) {
                     console.log("Password Error!");
                     res.send(401, "Access Denied");
                 }
