@@ -197,5 +197,15 @@ function init(app, User, randomString) {
             }
         })
     });
+
+    app.post('/auth/logout', function (req, res) { //for web
+        req.session.destroy(function (err) {
+            if(err){
+                console.log('/auth/logout session destroy error');
+                throw err;
+            }
+            res.send(200, "Logout Successfully");
+        });
+    });
     //function end
 }
