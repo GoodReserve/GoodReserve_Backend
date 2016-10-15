@@ -283,7 +283,20 @@
 
     HTTP Status 200, Menu Schema
     
-    -----
+-----
+
+> /menu/rest/list : 레스토랑의 id값으로 그 업소의 메뉴를 조회합니다. POST
+
+>> Requiring Params
+
+    restaurant_id : 업소의 고유 식별번호 입니다.
+    
+>> Return Values
+    
+    HTTP Status 200, Menu Object Array
+    
+-----
+
 > /rest/search/tag : 쿼리로 레스토랑을 검색합니다. POST
 
 >> Requiring Params
@@ -292,6 +305,18 @@
     
 >> Return Values
     
+    HTTP Status 200, Restaurant Object Array
+    
+-----
+
+> /rest/list : 업소의 리스트를 반환합니다. POST
+
+>> Requiring Params
+
+    None
+    
+>> Return Values
+
     HTTP Status 200, Restaurant Object Array
     
 -----
