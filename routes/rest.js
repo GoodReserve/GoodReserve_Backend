@@ -27,7 +27,7 @@ function init(app, User, Restaurant, Menu, randomString) {
                 main_benefit : req.param('main_benefit'),
                 sub_benefit : req.param('sub_benefit')
             },
-            thumbnail : req.files[0].path
+            thumbnail : __dirname + req.files[0].path
         });
         Restaurant.find({address : req.param('address')}, function (err, result) {
             if(err){
