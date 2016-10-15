@@ -89,30 +89,40 @@ function init(app, User, randomString) {
             user_type : req.param('user_type'),
             user_restaurant : req.param('user_restaurant')
         });
-        if(req.param('password') == req.param('password_chk')){
-            user.save(function (err) {
-                if (err){
-                    console.log("/auth/register Failed");
-                    throw err;
-                }
+        User.find({phone : req.param('phone')}).exec(function (err, result) {
+            if(err){
+                console.log('/auth/local/register DB Error');
+                throw err;
+            }
+            if(result.length != 0){
+                console.log("User Data Exists!");
+                res.send(409, "User Data Exists!");
+            }
+            else if(result.length == 0 && req.param('password') == req.param('password_chk')){
+                user.save(function (err) {
+                    if (err){
+                        console.log("/auth/register Failed");
+                        throw err;
+                    }
 
-                else {
-                    console.log("user register : " + user);
-                    var response = {
-                        _id : user._id,
-                        email : user.email,
-                        name : user.name,
-                        phone : user.phone,
-                        auth_token : user.auth_token,
-                        reservation : user.reservation,
-                        reservation_waiting : user.reservation_waiting,
-                        user_type : user.user_type,
-                        user_restaurant : user.user_restaurant
-                    };
-                    res.send(200, response);
-                }
-            });
-        }
+                    else {
+                        console.log("user register : " + user);
+                        var response = {
+                            _id : user._id,
+                            email : user.email,
+                            name : user.name,
+                            phone : user.phone,
+                            auth_token : user.auth_token,
+                            reservation : user.reservation,
+                            reservation_waiting : user.reservation_waiting,
+                            user_type : user.user_type,
+                            user_restaurant : user.user_restaurant
+                        };
+                        res.send(200, response);
+                    }
+                });
+            }
+        })
     });
 
     app.post('/auth/local/authenticate', function (req, res) {

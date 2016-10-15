@@ -190,6 +190,7 @@
     user_restaurant : 사용자가 업주일떄 자신의 음식점에 대한 고유 식별번호 입니다.
     
 >> Return Values
+
     >>> On Success
     
         HTTP Status 200, User Schema Without Password
