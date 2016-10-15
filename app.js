@@ -48,6 +48,7 @@ var MenuSchema = new schema({
 var ReservationSchema = new schema({
     _id: String,
     restaurant_id : String,
+    reservation_maker : String,
     restaurant_name: String,
     reservation_time: Date,
     reservation_people: Number,

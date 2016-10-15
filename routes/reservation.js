@@ -14,6 +14,7 @@ function init(app, User, Restaurant, Reservation, Menu, randomString) {
             var resv = new Reservation({
                 _id : randomString.generate(13),
                 restaurant_id : req.param('restaurant_id'),
+                reservation_maker : req.param('reservation_maker'),
                 restaurant_name : result.name,
                 reservation_time : req.param('reservation_name'),
                 reservation_people : req.param('reservation_people'),
