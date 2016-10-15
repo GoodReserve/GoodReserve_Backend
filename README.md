@@ -297,6 +297,18 @@
     
 -----
 
+> /rest/search/name : 이름으로 레스토랑을 검색합니다. POST
+
+>> Requiring Params
+
+    query : 음식점을 검색하기 위한 쿼리입니다.
+    
+>> Return Values
+
+    HTTP Status 200, Restaurant Object Array
+    
+-----
+
 > /rest/search/tag : 쿼리로 레스토랑을 검색합니다. POST
 
 >> Requiring Params
