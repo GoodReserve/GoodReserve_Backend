@@ -60,7 +60,10 @@ var ReservationSchema = new schema({
 
 var BucketSchema = new schema({
     _id : String,
-    menus : Array,
+    menus : [{
+        type : String,
+        ref : 'menus'
+    }]
 });
 
 
@@ -99,7 +102,7 @@ require('./routes/auth.js')(app, User, randomString);
 require('./routes/reservation.js')(app, User, Restaurant, Reservation, Menu, randomString);
 require('./routes/rest.js')(app, User, Restaurant, Menu, randomString);
 require('./routes/menu.js')(app, User, Restaurant, Menu, randomString);
-require('./routes/bucket.js')(app, Bucket, randomString);
+require('./routes/bucket.js')(app, Bucket, Menu, randomString);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
