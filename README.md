@@ -475,4 +475,16 @@
 >> Return Values
 
     HTTP Staus 200, Bucket Schema
+    
+-----
+
+> /me/resv : 내 예약 정보를 모두 가져옵니다.
+
+>> Requiring Params
+    
+    id : 내 고유 식별번호 입니다.
+    
+>> Return Values
+
+    HTTP Status 200, Reservation Schema Array
         

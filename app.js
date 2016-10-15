@@ -104,7 +104,7 @@ require('./routes/reservation.js')(app, User, Restaurant, Reservation, Menu, ran
 require('./routes/rest.js')(app, User, Restaurant, Menu, randomString);
 require('./routes/menu.js')(app, User, Restaurant, Menu, randomString);
 require('./routes/bucket.js')(app, Bucket, Menu, randomString);
-require('./routes/user.js')(app, User);
+require('./routes/user.js')(app, User, Reservation);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
