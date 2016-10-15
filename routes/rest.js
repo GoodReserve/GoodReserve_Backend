@@ -60,5 +60,6 @@ function init(app, User, Restaurant, Menu, randomString) {
         res.send(200, result);
     })
 
+
     //function end
 }
