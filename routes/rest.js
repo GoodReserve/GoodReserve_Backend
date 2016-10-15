@@ -13,6 +13,7 @@ function init(app, User, Restaurant, Menu, randomString) {
         }
     });
     app.post('/rest/add', upload.array('thumbnail',5), function (req, res, next) {
+        console.log(JSON.stringify(req.files));
         var rest = new Restaurant({
             _id : randomString.generate(13),
             name : req.param('name'),
@@ -26,7 +27,7 @@ function init(app, User, Restaurant, Menu, randomString) {
                 main_benefit : req.param('main_benefit'),
                 sub_benefit : req.param('sub_benefit')
             },
-            thumbnail : req.files
+            thumbnail : req.files[0].path
         });
         Restaurant.find({address : req.param('address')}, function (err, result) {
             if(err){

@@ -19,7 +19,7 @@ function init(app, User, Restaurant, Menu, randomString) {
             price : req.param('price'),
             name : req.param('name'),
             restaurant : req.param('restaurant'),
-            thumbnail : req.files
+            thumbnail : req.files[0].path
         });
         if(menu.name != null){
             menu.save(function (err, silent) {
