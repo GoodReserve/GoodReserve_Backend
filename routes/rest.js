@@ -51,13 +51,19 @@ function init(app, User, Restaurant, Menu, randomString) {
         });
     });
 
-    app.post('/rest/list', function (err, result) {
-        if(err){
-            console.log('/rest/list db error');
-            throw err;
-        }
-        console.log("Getting Rest List : "+ result);
-        res.send(200, result);
+    app.post('/rest/list', function (req, res) {
+        Restaurant.find({}, function (err, result) {
+            if(err){
+                console.log('/rest/list db Error');
+                throw err;
+            }
+            console.log("Getting Rest List : "+ result);
+            res.send(200, result);
+        });
+    });
+    
+    app.post('/rest/search/tag', function (req, res) {
+
     })
 
     //function end
