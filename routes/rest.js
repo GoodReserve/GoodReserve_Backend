@@ -73,5 +73,16 @@ function init(app, User, Restaurant, Menu, randomString) {
         });
     });
 
+    app.post('/rest/search/name', function (req, res) {
+        Restaurant.find({name : req.param('query')}).exec(function (err, result) {
+            if(err){
+                console.log("/rest/search/name db Error");
+                throw err;
+            }
+            console.log("Restaurant Founded : "+ result);
+            res.send(200, result);
+        })
+    })
+
     //function end
 }
