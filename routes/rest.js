@@ -63,8 +63,15 @@ function init(app, User, Restaurant, Menu, randomString) {
     });
     
     app.post('/rest/search/tag', function (req, res) {
-
-    })
+        Restaurant.find({tag : req.param('query')}).exec(function (err, result) {
+            if(err){
+                console.log('/rest/search/tag db error');
+                throw err;
+            }
+            console.log("Restaurant Founded : "+ result);
+            res.send(200, result);
+        });
+    });
 
     //function end
 }
