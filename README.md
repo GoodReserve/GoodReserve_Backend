@@ -187,8 +187,14 @@
     user_restaurant : 사용자가 업주일떄 자신의 음식점에 대한 고유 식별번호 입니다.
     
 >> Return Values
-
-    HTTP Status 200, User Schema Without Password
+    >>> On Success
+    
+        HTTP Status 200, User Schema Without Password
+        
+    >>> Conflict
+        
+        HTTP Status 409, Error Message
+    
 -----
 
 > /auth/local/authenticate : 로컬서버 Database를 통한 자동로그인 API입니다. POST
@@ -199,7 +205,9 @@
     
 >> Return Values
     
-    HTTP Status 200, User Schema Without Password
+    >>> OnSuccess
+    
+        HTTP Status 200, User Schema Without Password
 
 -----
 > /auth/local/login : 로컬서버 Database를 통한 로그인 API입니다. 초기 1회 이후는 /auth/local/authenticate를 이용해주세요. POST
@@ -217,15 +225,12 @@
         
     >>> OnFailure
     
-        HTTP Status 401
+        HTTP Status 400
         
     >> Unvalid User Info
         
-        HTTP Status 402
-    
-    >> Can't find User Info
-    
         HTTP Status 403
+    
         
 -----
 > /rest/add : 업소의 정보를 추가합니다. POST
@@ -245,8 +250,13 @@
     
 >> Return Values
 
-    HTTP Status 200, Restaurant Schema
+    >>> OnSuccess
     
+        HTTP Status 200, Restaurant Schema
+    
+    >>> Conflict
+        
+        HTTP Status 409, Error Message
     -----
 > /rest/search : 업소의 id값으로 업소의 정보를 조회합니다. POST
 
