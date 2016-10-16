@@ -30,7 +30,13 @@ function init(app, User, Restaurant, Reservation, Menu, randomString) {
                     throw err;
                 }
                 console.log("Reservation Created : " + resv);
-                res.send(200, resv);
+                Reservation.findOne({_id : resv._id}).populate('reservation_menu').exec(function (err, result) {
+                    if(err){
+                        console.log('/resv/add population DB Error');
+                        throw err;
+                    }
+                    res.send(200, result);
+                });
             });
         });
     });
