@@ -16,7 +16,7 @@ function init(app, User, Restaurant, Reservation, Menu, randomString) {
                 restaurant_id : req.param('restaurant_id'),
                 reservation_maker : req.param('reservation_maker'),
                 restaurant_name : result.name,
-                reservation_time : req.param('reservation_name'),
+                reservation_time : req.param('reservation_time'),
                 reservation_people : req.param('reservation_people'),
                 reservation_payment : req.param('reservation_payment'),
                 reservation_menu : req.param('reservation_menu'),
