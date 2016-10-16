@@ -13,7 +13,7 @@ function init(app, User, Restaurant, Menu, randomString) {
         }
     });
 
-    app.post('/menu/add', upload.single('thumbnail'), function (req, res) {
+    app.post('/menu/add', upload.array('thumbnail',5), function (req, res) {
         var menu = new Menu({
             _id : randomString.generate(13),
             price : req.param('price'),
