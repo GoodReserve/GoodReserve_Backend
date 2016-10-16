@@ -22,7 +22,7 @@ function init(app, Bucket, Menu, randomString) {
 
     app.post('/bucket/update', function (req, res) {
         console.log(typeof req.param('menus'));
-        Bucket.update({_id : req.param('bucket_id')}, {menus : req.param('menus')}, function (err, result) {
+        Bucket.update({_id : req.param('bucket_id')}, {menus : req.param('menus').split(',')}, function (err, result) {
             if(err){
                 console.log('/bucket/update DB Error');
                 throw err;
