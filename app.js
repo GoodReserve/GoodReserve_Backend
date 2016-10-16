@@ -53,7 +53,10 @@ var ReservationSchema = new schema({
     reservation_time: Date,
     reservation_people: Number,
     reservation_payment: Number,
-    reservation_menu: Array,
+    reservation_menu: [{
+        type : String,
+        ref : 'menus'
+    }],
     reservation_price: Number,
     reservation_code: String,
     reservation_status : Number
