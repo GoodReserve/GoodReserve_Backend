@@ -48,7 +48,7 @@
     음식점의 업소명 입니다.
     
     menu : Menu Object Array
-    음식점의 메뉴 리스트입니다.
+    음식점의 메뉴 리스트입니다. id값으로 이루어져 있는 배열의 형태입니다.
     
     thumbnail : String
     썸네일로 띄워질 이미지의 경로입니다.
@@ -134,7 +134,7 @@
         1 : 현장결제
         
     reservation_menu : String
-    예약한 메뉴의 장바구니 고유 식별번호입니다.
+    예약한 메뉴의 장바구니 고유 식별번호입니다. 장바구니의 id값을 저장합니다.
     
     reservation_price : Number
     예약한 메뉴의 총 금액입니다.
