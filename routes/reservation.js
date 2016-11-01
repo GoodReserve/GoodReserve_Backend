@@ -30,7 +30,13 @@ function init(app, User, Restaurant, Reservation, Menu, randomString) {
                     throw err;
                 }
                 console.log("Reservation Created : " + resv);
-                Reservation.findOne({_id : resv._id}).populate('reservation_menu').exec(function (err, result) {
+                Reservation.findOne({_id : resv._id}).populate({
+                    path: 'reservation_menu',
+                    populate : {
+                        path : 'menus',
+                        model : 'menus'
+                    }
+                }).exec(function (err, result) {
                     if(err){
                         console.log('/resv/add population DB Error');
                         throw err;
