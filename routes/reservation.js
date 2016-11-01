@@ -48,7 +48,13 @@ function init(app, User, Restaurant, Reservation, Menu, randomString) {
     });
 
     app.post('/resv/search', function (req, res) {
-        Reservation.findOne({_id : req.param('id')}).populate('reservation_menu').exec(function (err, result) {
+        Reservation.findOne({_id : req.param('id')}).populate({
+            path : 'reservation_menu',
+            populate : {
+                path : 'menus',
+                model : 'menus'
+            }
+        }).exec(function (err, result) {
             if(err){
                 console.log("/resv/search DB Error");
                 throw err;
