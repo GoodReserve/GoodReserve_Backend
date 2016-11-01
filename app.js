@@ -54,7 +54,7 @@ var ReservationSchema = new schema({
     reservation_people: Number,
     reservation_payment: Number,
     reservation_menu: {
-        type : Object,
+        type : String,
         ref : 'buckets'
     },
     reservation_price: Number,
