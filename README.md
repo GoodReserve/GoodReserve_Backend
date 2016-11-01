@@ -133,7 +133,7 @@
         0 : 선금결제
         1 : 현장결제
         
-    reservation_menu : String
+    reservation_menu : Object
     예약한 메뉴의 장바구니 고유 식별번호입니다. 장바구니의 id값을 저장합니다.
     
     reservation_price : Number
